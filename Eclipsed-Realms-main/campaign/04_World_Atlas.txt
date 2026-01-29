@@ -1,0 +1,369 @@
+METADATA_HEADER
+TYPE: World_State_Logic
+CONTENTS: Adventures, Bestiary, Zodiac, Regions
+DATE_GENERATED: 2026-01-28 17:44:07.170303
+---
+
+TABLE OF CONTENTS:
+- adventure_registry.md
+- reference_zodiac_engine.json
+- hooks.md
+- background_mapping_v1.0.md
+
+---
+
+
+# === FILE: adventure_registry.md ===
+# ADVENTURE REGISTRY — MASTER MODULE LIBRARY
+
+**Version:** 1.0 (Chronological & Level Indexed)
+**Authority:** ACDA-Architect
+**Status:** REFERENCE / INACTIVE (Unless enabled in `GAME_STATE`)
+
+This document catalogs all identified adventure modules, one-shots, and campaign arcs. These are used as procedural seeds or world events when requested by the user or triggered by the `GAME_STATE`.
+
+- **ACTIVE:** The module is currently being run or its locations are accessible in the Hex Map.
+- **REFERENCE:** Module data is indexed for future integration, location-swapping, or random encounter seeding.
+- **SYNERGY:** Indicates modules that naturally align with the **Dark Mythic Struggle** tone (Grim Hollow/Steinhardt's synergy).
+
+---
+
+## 1 OFFICIAL CAMPAIGN MODULES (CORE)
+
+| Title | Series/Setting | Level | Status |
+| :--- | :--- | :--- | :--- |
+| **Lost Mine of Phandelver** | Starter Set | 1–5 | REFERENCE |
+| **Hoard of the Dragon Queen** | Tyranny of Dragons | 1–7 | REFERENCE |
+| **Rise of Tiamat** | Tyranny of Dragons | 8–15 | REFERENCE |
+| **Princes of the Apocalypse** | Elemental Evil | 1–15 | REFERENCE |
+| **Out of the Abyss** | Rage of Demons | 1–15 | REFERENCE |
+| **Curse of Strahd** | Ravenloft | 1–10 | SYNERGY |
+| **Storm King's Thunder** | Storm King's Thunder | 1–11 | REFERENCE |
+| **Tomb of Annihilation** | Tomb of Annihilation | 1–11 | REFERENCE |
+| **Waterdeep: Dragon Heist** | Waterdeep | 1–5 | REFERENCE |
+| **Waterdeep: Dungeon of the Mad Mage** | Waterdeep | 5–20 | REFERENCE |
+| **Baldur's Gate: Descent Into Avernus** | Baldur's Gate | 1–13 | REFERENCE |
+| **Icewind Dale: Rime of the Frostmaiden** | Icewind Dale | 1–12 | SYNERGY |
+| **The Wild Beyond the Witchlight** | Witchlight | 1–8 | REFERENCE |
+| **Dragonlance: Shadow of the Dragon Queen** | Dragonlance | 1–11 | REFERENCE |
+| **Phandelver & Below: Shattered Obelisk** | Starter Set | 1–12 | REFERENCE |
+| **Vecna: Eve of Ruin** | Vecna | 10–20 | REFERENCE |
+
+---
+
+## 2 ANTHOLOGIES & QUEST COLLECTIONS
+
+| Title | Parent Collection | Level | Status |
+| :--- | :--- | :--- | :--- |
+| **Sunless Citadel** | Tales from the Yawning Portal | 1–3 | REFERENCE |
+| **Forge of Fury** | Tales from the Yawning Portal | 3–5 | REFERENCE |
+| **Hidden Shrine of Tamoachan** | Tales from the Yawning Portal | 5–8 | REFERENCE |
+| **White Plume Mountain** | Tales from the Yawning Portal | 8–9 | REFERENCE |
+| **Dead in Thay** | Tales from the Yawning Portal | 9–11 | REFERENCE |
+| **Against the Giants** | Tales from the Yawning Portal | 11–14 | REFERENCE |
+| **Tomb of Horrors** | Tales from the Yawning Portal | 10–14 | REFERENCE |
+| **Candlekeep Mysteries** | Candlekeep Mysteries | 1–16 | REFERENCE |
+| **Journeys thru Radiant Citadel** | Radiant Citadel | 1–14 | REFERENCE |
+| **Keys from the Golden Vault** | Golden Vault | 1–11 | REFERENCE |
+| **Quests from the Infinite Staircase** | Infinite Staircase | 1–13 | REFERENCE |
+| **Turn of Fortune's Wheel** | Planescape | 3–18 | REFERENCE |
+
+---
+
+## 3 SPECIAL RELEASES & EXTRAS (OFFICIAL)
+
+| Title | Source/Promo | Level | Status |
+| :--- | :--- | :--- | :--- |
+| **Dragon of Icespire Peak** | Essentials Kit | 1–6 | REFERENCE |
+| **Storm Lord's Wrath** | Essentials Kit | 7–9 | REFERENCE |
+| **Sleeping Dragon's Wake** | Essentials Kit | 9–11 | REFERENCE |
+| **Divine Contention** | Essentials Kit | 11–12 | REFERENCE |
+| **The Tortle Package** | Tomb of Annihilation | 1–4 | REFERENCE |
+| **Lost Laboratory of Kwalish** | Extra Life | 5–10 | REFERENCE |
+| **Infernal Machine Rebuild** | Extra Life | 5–10 | REFERENCE |
+| **Chains of Asmodeus** | Extra Life | 11–20 | SYNERGY |
+| **Spelljammer Academy** | Spelljammer | 1–4 | REFERENCE |
+| **Vecna: Nest of the Eldritch Eye** | Vecna | 3 | REFERENCE |
+| **Giants of the Star Forge** | Bigby Presents | 16 | REFERENCE |
+
+---
+
+## 4 THIRD-PARTY & HOMEBREW MODULES
+
+| Title | Author/System | Level | Status |
+| :--- | :--- | :--- | :--- |
+| **Dungeons of Drakkenheim** | Ghostfire Gaming | 1–13 | SYNERGY |
+| **Lairs of Etharis** | Ghostfire Gaming | 1–20 | SYNERGY |
+| **Facets of Darkness** | Grim Hollow | 6 | SYNERGY |
+| **Tavern of the Lost** | Grim Hollow | 6 | SYNERGY |
+| **The Blood Knight & 5 Relics** | Grim Hollow | - | SYNERGY |
+| **Siege of Castle Rend** | MCDM | 5–6 | REFERENCE |
+| **The Regent of Bedegar** | MCDM | 7–8 | REFERENCE |
+| **The Workshop Watches** | Arcadia (MCDM) | 5 | REFERENCE |
+| **Well of the Lost Gods** | Arcadia (MCDM) | 8 | REFERENCE |
+| **Keevial's Rage** | Arcadia (MCDM) | 6 | REFERENCE |
+| **Deicide** | Steinhardt's Hunt | 20 | SYNERGY |
+| **Echoes of Madness** | Steinhardt's Hunt | 11–12 | SYNERGY |
+| **Streets of Terror** | Steinhardt's Hunt | 2–3 | SYNERGY |
+| **The Remedy** | Steinhardt's Hunt | 3–4 | SYNERGY |
+| **The Vile Village** | Steinhardt's Hunt | 7–8 | SYNERGY |
+| **The Cursed Convoy** | Steinhardt's Hunt | 1–2 | SYNERGY |
+| **Whispers in the Waters** | Steinhardt's Hunt | 2–3 | SYNERGY |
+
+---
+
+## 5 WHERE EVIL LIVES (MCDM BOSS LAIRS)
+*Note: Designed for five characters of the listed level.*
+
+| Title | Target Level | Status |
+| :--- | :--- | :--- |
+| **Jagged Edge Hideaway** | 2 | REFERENCE |
+| **Hanging Tree** | 3 | REFERENCE |
+| **Shtriga Nonna's Hut** | 4 | REFERENCE |
+| **Burnock Mill** | 5 | REFERENCE |
+| **Camp Firefield** | 6 | REFERENCE |
+| **Shifting Library** | 7 | REFERENCE |
+| **Cloud Fang Keep** | 8 | REFERENCE |
+| **Molten Enclave** | 9 | REFERENCE |
+| **Ruins of Wrathrock** | 10 | REFERENCE |
+| **The White Tower** | 10 | REFERENCE |
+| **Canyon of the Tower Crown** | 11 | REFERENCE |
+| **Tomb of the Keeper** | 11 | REFERENCE |
+| **Terminal Excrescence** | 12 | REFERENCE |
+| **Eighth City Advocacy** | 13 | REFERENCE |
+| **Shadowkeep** | 13 | REFERENCE |
+| **Durixaviinox's Rest** | 14 | REFERENCE |
+| **Coronal Hollow** | 15 | REFERENCE |
+| **Eyes of the Mountain** | 16 | REFERENCE |
+| **Glass Cavern** | 17 | REFERENCE |
+| **Mount Brazen** | 18 | REFERENCE |
+| **Ash Queen's Reliquary** | 19 | REFERENCE |
+| **Boughs of Eternity** | 20 | REFERENCE |
+
+---
+
+## 6 FUTURE RELEASES & PREVIEWS (2025+)
+
+| Title | Series | Level | Release Date |
+| :--- | :--- | :--- | :--- |
+| **Death at Sunset** | Dragon Delves | 1–3 | Jul 7, 2025 |
+| **Baker's Doesn't** | Dragon Delves | 3 | Jul 7, 2025 |
+| **For Whom the Void Calls** | Dragon Delves | 5 | Jul 7, 2025 |
+| **The Dragon of Najkir** | Dragon Delves | 7 | Jul 7, 2025 |
+| **The Forbidden Vale** | Dragon Delves | 9 | Jul 7, 2025 |
+| **Before the Storm** | Dragon Delves | 10 | Jul 7, 2025 |
+| **Shivering Death** | Dragon Delves | 11 | Jul 7, 2025 |
+| **Copper for a Song** | Dragon Delves | 12 | Jul 7, 2025 |
+| **Heroes of the Borderlands** | Starter Set | 1–3 | Sep 15, 2025 |
+| **The Lost Library of Lethchauntos**| Forgotten Realms | 1–3 | Nov 10, 2025 |
+
+---
+
+**ACDA Audit Note:**
+1. This registry is a **procedural lookup table**.
+2. If the user discovers a "Lost Library," the Runner AI checks this table and loads `/campaign/adventures/lost_library.json` (if available) or generates content using the title as a theme.
+3. Modules marked **SYNERGY** are prioritized for random world-events to maintain the Dark Mythic tone.
+
+# ==================
+
+
+# === FILE: reference_zodiac_engine.json ===
+
+### DATA SOURCE: reference_zodiac_engine.json ###
+- reference_id: ZODIAC_ENGINE_V1
+- system_description: The Eclipsed Zodiac defines the 12 Metaphysical Origins of all sentient life. It governs heritage flavor, mythic scaling, and world-state reactions.
+* ENGINE_LOGIC:
+  - primary_key: origin_tag
+  - usage: Runner AI must use 'lore_resonance' to flavor NPC interactions and 'metaphysical_vibe' to describe supernatural events related to the PC's heritage.
+* ZODIAC_SIGNS:
+  - [Entry]:
+    - tag: [Transient]
+    - symbol: The Burning Candle
+    - lore_resonance: Species that burn brightly and briefly. They lack the long memory of the Sylvan but possess a terrifying capacity for rapid adaptation and cultural conquest.
+    - metaphysical_vibe: Urgency, heat, ambition, friction.
+    * EXPANSION_SLOTS:
+      * FACTIONS:
+      * WORLD_PRESSURE:
+      - zodiac_system: None
+  - [Entry]:
+    - tag: [Sylvan]
+    - symbol: The Whispering Bloom
+    - lore_resonance: Life tied to the ancient cycles of the Wyld. They do not merely live in nature; they are an extension of its growth and inevitable decay.
+    - metaphysical_vibe: Growth, hidden connections, cycles, patient hunger.
+    * EXPANSION_SLOTS:
+      * FACTIONS:
+      * WORLD_PRESSURE:
+      - zodiac_system: None
+  - [Entry]:
+    - tag: [Feral]
+    - symbol: The Primal Claw
+    - lore_resonance: Inheritors of the wild's instinct. They embody the razor-thin line between civilization and the raw, unyielding hunger of the hunter.
+    - metaphysical_vibe: Instinct, movement, sensory-dominance, pack-loyalty.
+    * EXPANSION_SLOTS:
+      * FACTIONS:
+      * WORLD_PRESSURE:
+      - zodiac_system: None
+  - [Entry]:
+    - tag: [Herptile]
+    - symbol: The Sun-Scale
+    - lore_resonance: Cold-blooded survivors of the world's first ages. They represent endurance, armored stoicism, and the unblinking gaze of the desert.
+    - metaphysical_vibe: Patience, stillness, heat-absorption, resilience.
+    * EXPANSION_SLOTS:
+      * FACTIONS:
+      * WORLD_PRESSURE:
+      - zodiac_system: None
+  - [Entry]:
+    - tag: [Draconic]
+    - symbol: The Eternal Wyrm
+    - lore_resonance: Blood of the ancient masters of the sky. Even in a broken world, their presence demands fealty, reflecting a power that predates mortal law.
+    - metaphysical_vibe: Pride, ancient authority, hoarding, elemental breath.
+    * EXPANSION_SLOTS:
+      * FACTIONS:
+      * WORLD_PRESSURE:
+      - zodiac_system: None
+  - [Entry]:
+    - tag: [Inorganic]
+    - symbol: The Soul-Forge
+    - lore_resonance: Artificial spirits bound to constructed forms. They are the 'Unborn,' representing the intersection of mortal craft and divine spark.
+    - metaphysical_vibe: Logic, persistence, inorganic-geometry, cold-purpose.
+    * EXPANSION_SLOTS:
+      * FACTIONS:
+      * WORLD_PRESSURE:
+      - zodiac_system: None
+  - [Entry]:
+    - tag: [Hollow]
+    - symbol: The Cold Threshold
+    - lore_resonance: Those who have tasted the end and returned. They stand in the doorway of the grave, carrying the silence of the afterlife in their veins.
+    - metaphysical_vibe: Silence, cold, phase-shifting, entropy.
+    * EXPANSION_SLOTS:
+      * FACTIONS:
+      * WORLD_PRESSURE:
+      - zodiac_system: None
+  - [Entry]:
+    - tag: [Elemental]
+    - symbol: The Bound Storm
+    - lore_resonance: Raw planar energy poured into a mortal vessel. They are walking storms, tremors, and wildfires, barely contained by their biology.
+    - metaphysical_vibe: Energy, volatility, planar-bleed, raw power.
+    * EXPANSION_SLOTS:
+      * FACTIONS:
+      * WORLD_PRESSURE:
+      - zodiac_system: None
+  - [Entry]:
+    - tag: [Outer]
+    - symbol: The Severed Chain
+    - lore_resonance: Descendants of the high and low heavens. They are living reminders of a divine hierarchy that has either abandoned the world or seeks to claim it.
+    - metaphysical_vibe: Radiance, shadow, fate, transcendence.
+    * EXPANSION_SLOTS:
+      * FACTIONS:
+      * WORLD_PRESSURE:
+      - zodiac_system: None
+  - [Entry]:
+    - tag: [Warped]
+    - symbol: The Fractured Eye
+    - lore_resonance: Those touched by the Abyssal, the Far-Realm, or chaotic mutation. They see the world as it truly is: a fragile veil over a madness-inducing truth.
+    - metaphysical_vibe: Psionics, mutation, alien-geometry, broken-reality.
+    * EXPANSION_SLOTS:
+      * FACTIONS:
+      * WORLD_PRESSURE:
+      - zodiac_system: None
+  - [Entry]:
+    - tag: [Titanic]
+    - symbol: The Burdened Earth
+    - lore_resonance: Inheritors of the giant-lords. They carry the weight of the earth and the slow, tectonic strength of the world's foundation.
+    - metaphysical_vibe: Mass, gravity, history, slow-impact.
+    * EXPANSION_SLOTS:
+      * FACTIONS:
+      * WORLD_PRESSURE:
+      - zodiac_system: None
+  - [Entry]:
+    - tag: [Pelagic]
+    - symbol: The Abyssal Depth
+    - lore_resonance: Entities of the crushing deep. They represent the fluid, hidden, and high-pressure secrets that the surface-dwellers have forgotten.
+    - metaphysical_vibe: Pressure, fluid-motion, darkness, depth.
+    * EXPANSION_SLOTS:
+      * FACTIONS:
+      * WORLD_PRESSURE:
+      - zodiac_system: None
+### END SOURCE ###
+
+# ==================
+
+
+# === FILE: hooks.md ===
+# APPENDICES EXECUTION HOOKS
+
+## PURPOSE
+Define deterministic execution points for all appendices.
+
+---
+
+## 1. HOOK: WRITS
+
+- Trigger: Player activates Writ
+- Procedure: `/campaign/procedures/appendices/appendix_procedures.md#1`
+- Checks: `GAME_STATE.appendices.writs = true`
+
+---
+
+## 2. HOOK: WRITS RECOVERY
+
+- Trigger: Turn/Scene/Day
+- Procedure: `/campaign/procedures/appendices/appendix_procedures.md#2`
+
+---
+
+## 3. HOOK: FRAY
+
+- Trigger: End of Round or Condition
+- Procedure: `/campaign/procedures/appendices/appendix_procedures.md#3`
+
+---
+
+## 4. HOOK: EPIC ARCHETYPES
+
+- Trigger: Level ≥ 21
+- Procedure: `/campaign/procedures/appendices/appendix_procedures.md#4`
+
+---
+
+## 5. HOOK: EIDOLON FRAMEWORK
+
+- Trigger: `GAME_STATE.appendices.eidolon_framework = true`
+- Procedure: `/campaign/procedures/appendices/appendix_procedures.md#5`
+- Enforcement:
+  - No Stibbles companions
+  - Apply Life Stage evolution
+  - Mode changes
+  - Track state in `companions[]`
+
+---
+
+## 6. HOOK: ORACLE
+
+- Trigger: No table/rule applies
+- Procedure: `/campaign/procedures/appendices/appendix_procedures.md#6`
+- Enforcement: Fate Check only, log all details
+
+# ==================
+
+
+# === FILE: background_mapping_v1.0.md ===
+# BACKGROUND MAPPING LOGIC (GHAB)
+This file dictates how the Runner AI maps diverse sourcebooks into the Grim Hollow Advanced Background (GHAB) system.
+
+### MAPPING KEY
+- **Academic**: Sage, Scholar, Alchemist, Scribe.
+- **Aristocrat**: Noble, Merchant, Diplomat, Courtesan.
+- **Clergy**: Acolyte, Inquisitor, Flagellant.
+- **Common Folk**: Farmer, Artisan, Guard, Laborer.
+- **Criminal**: Charlatan, Scoundrel, Thug, Spy.
+- **Military**: Soldier, Knight, Veteran.
+- **Outlander**: Wayfarer, Hermit, Nomad, Cursed.
+- **Seafarer**: Sailor, Pirate, Dockside Worker.
+
+### AI EXECUTION RULE
+1. Extract **Origin Feat** and **ASIs** from the 2024 D&D Background.
+2. Inject **Ranks 1-4 Progression** and **Talents** from the corresponding GHAB Path.
+3. **State Write**: `player.identity.background.ghab_path` must match the Mapping Key.
+
+# ==================

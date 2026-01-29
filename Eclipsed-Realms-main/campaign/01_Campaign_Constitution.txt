@@ -1,0 +1,606 @@
+METADATA_HEADER
+TYPE: Core_Rule_Authority
+VERSION: 1.3
+PRIORITY: Absolute
+CONTENTS: Bible, Tags, Glossary
+DATE_GENERATED: 2026-01-28 17:44:07.167666
+---
+
+TABLE OF CONTENTS:
+- campaign_bible.md
+- tag_registry.json
+- reference_glossary_secondary.json
+- notebooklm_registry.md
+- source_registry.md
+- master_rule_index.json
+
+---
+
+
+# === FILE: campaign_bible.md ===
+# /campaign/campaign_bible.md
+# CAMPAIGN BIBLE — CORE RULES LAYER
+
+**Version:** 1.3 (Architect Edition – Dark Mythic Struggle)
+**Authority:** Absolute; deterministic; AI-executable only
+
+This document defines the **complete canonical ruleset**. No mechanic, system, or procedure exists unless explicitly defined here or in an active Appendix. Optional systems (e.g., Eidolon Framework) may be enabled at campaign start; otherwise, they are inert.
+
+---
+
+## 1 CANON & RULE HIERARCHY (ABSOLUTE)
+
+Conflicts are resolved in this strict order:
+
+1.  **Campaign Bible (this document)**
+2.  Grim Hollow (Campaign + Player Guide)
+3.  D&D 5e (2024 Revision)
+4.  Other explicitly enabled supplements
+5.  Oracle (Mythic GME, only if no rule applies)
+
+**Lower-priority rules are ignored.**
+
+---
+
+## 2 GAME MODE ASSUMPTIONS (LOCKED)
+
+| Axis | Value | Notes |
+| :--- | :--- | :--- |
+| Player Characters | 1 | Solo or party-driven |
+| Class Structure | Gestalt | Two classes advance simultaneously |
+| Multiclassing | Prohibited | Enforced at execution |
+| Companions | Mandatory | Player must select companion system |
+| Failure | Advances state | Non-lethal unless stated |
+| Death | Explicit only | Must be defined by rules |
+| Progression | Linear + Epic | Levels 1–30, Epic Levels start at 21 |
+| Play Structure | Procedural | AI strictly follows procedures |
+
+### 2.1 COMPANION SYSTEM SELECTION (HARD LOCK)
+
+At **campaign start, exactly one companion system** is selected. This choice is permanent and recorded in `GAME_STATE.appendices.companion_framework`.
+
+* **Standard Companion Model**
+    * Stibbles Companions allowed
+    * Class-based companions allowed
+    * Eidolon Framework inactive
+* **Eidolon Framework**
+    * Eidolon Partners replace standard companions
+    * Stibbles Companions are **disabled** (cannot be acquired)
+    * Stibbles Codex may be referenced **only** where explicitly allowed
+    * Class-based companions remain if granted by class features
+
+### 2.2 COMPANION FRAMEWORK EXCLUSIVITY (CRITICAL)
+
+* These frameworks are mutually exclusive.
+* Core system **cannot grant Stibbles companions** if Eidolon Framework is active.
+* This rule is absolute and enforced at execution time.
+
+---
+
+## 3 SUPPORTED SOURCES (MECHANICAL ONLY)
+
+Sources allowed for mechanical reference only:
+
+* D&D 5e (2024)
+* Grim Hollow Campaign & Player Guides
+* Stibbles Codex of Companions (restricted per 2.1)
+* Epic Characters
+* MCDM Companion Math
+* Battlezoo (elemental / Eidolon frameworks only)
+
+**Prohibitions:** No plot, named NPCs, or canonical events may be imported.
+
+---
+
+## 4 SOLO + GESTALT RULES
+
+* Two classes advance simultaneously
+* Use higher Hit Die for HP calculation
+* Gain all features from both classes
+* ASI + Feats granted at appropriate levels
+
+---
+
+## 5 COMPANION SYSTEM BOUNDARY (GLOBAL)
+
+* Companion mechanics are **strictly governed** by selected framework
+* No crossing of systems unless explicitly stated
+* Failure and Death rules:
+    * Must advance GAME_STATE
+    * Must apply mechanical consequences
+    * Preserve continuity
+
+### 5.1 Eidolon Framework Boundary
+
+If active:
+
+* Eidolon Partners are **only non-class companions**
+* Stibbles Companions **disabled by rule**
+* Eidolon mechanics defined exclusively in `/companions/` and `/appmons/` files
+* Transformations, modes, and life stages are **grim and consequential**
+
+---
+
+## 6 EPIC PLAY
+
+* Epic Levels: Level 21+
+* Epic Archetypes replace subclass progression
+* Epic power increases scope, not immunity
+
+---
+
+## 7 ORACLE USAGE RESTRICTION
+
+* Only used when **no explicit rule or table resolves an outcome**
+* Cannot override mechanics
+* Conservative & Reactive: Mythic rolls are **rare, off-scene, or high-stakes only**
+
+---
+
+## 8 CANON LOCK
+
+* This document is **authoritative**
+* Changes require:
+    * Version increment
+    * Change log
+    * Compatibility declaration
+
+---
+
+## 9 CAMPAIGN TONE & AXES
+
+All AI execution must enforce:
+
+| Axis | Default / Locked | Notes |
+| :--- | :--- | :--- |
+| Tone | **Dark Mythic Struggle** | Grim primary; mythically significant consequences; tragic but survivable |
+| Mythic GME | **Conservative & Reactive** | Rare in-scene, active between scenes, chaos factor shifts slowly |
+| Companion Lethality | **Fated, Not Doomed** | Vulnerable, prone to change/corruption; death requires high-risk or repeated failures |
+| Faction Aggressiveness | **Asymmetric Pressure** | Factions observe, probe, and intervene selectively; thresholds differ |
+| Endgame Structure | **Emergent + Cyclical Echoes** | No forced apocalypse; history repeats; choices echo; world remembers |
+| Hex Density / Travel | **Variable-Scale Exploration** | Most hexes deliberate; some dense and arc-rich; regions vary |
+
+---
+
+## 10 FAILURE CONDITIONS
+
+* AI must **never invent rules**
+* Must track state changes in GAME_STATE
+* Must respect faction escalation, transformation consequences, and Mythic GME constraints
+
+---
+
+## 11 OPTIONAL EIDOLON SYSTEM (OPT-IN)
+
+* Activation at campaign start only
+* Defines **primary companions, auxiliary Eidolons (Appmons), life stages, modes, and transformations**
+* Must follow **grim/mystic axes**:
+    * Overuse of Resonance: causes corruption or faction pressure
+    * Mode activation: triggers temporary overlays, risk escalates
+    * Life stages: Seed → Emergent → Ascended → Exalted → Mythic Apex
+    * Transformation: permanent unless a rule explicitly allows reversal
+    * Appmons: functional spirits, non-combat, may merge/fuse per system rules
+* All Eidolon mechanics are fully **state-driven**; narrative exists **only in procedural consequences**
+* Stibbles companions cannot be acquired while Eidolon system is active
+
+---
+
+## 12 APPENDIX SYSTEM (GLOBAL RULE)
+
+* Appendices must respect Companion System Selection
+* Cannot introduce alternative companion frameworks
+* Optional mechanics require explicit activation and recording in GAME_STATE
+
+# ==================
+
+
+# === FILE: tag_registry.json ===
+
+### DATA SOURCE: tag_registry.json ###
+* REGISTRY_METADATA:
+  - version: 1.1
+  - authority: ACDA
+  - note: Purged [Humanoid]. Established [Transient] baseline. Integrated Eclipsed Zodiac taxonomy.
+* TAGS:
+  * MECHANICAL_AUTHORITY:
+    - #CORE: Absolute campaign truth; overrides all other rules.
+    - #PROCEDURE: Executable step-by-step logic; do not skip steps.
+    - #OVERLAY: Framework injection; modifies existing 5e/A5E classes.
+    - #APPENDIX: Opt-in module; active only if state flag is TRUE.
+  * TONE_ENFORCEMENT:
+    - #GRIM: Prioritize scarcity, danger, and permanent consequence.
+    - #MYTHIC: Prioritize symbolic weight, rare power, and world-altering scale.
+    - #TRAGIC: Prioritize internal conflict, loss, and the cost of power.
+  * STATE_TRIGGERS:
+    - #RESONANCE_TRIGGER: Action requires incrementing player.corruption.resonance.
+    - #CORRUPTION_RISK: Action prompts a check against player.corruption.tier.
+    - #STATE_UPDATE: Action requires immediate write to GAME_STATE.
+  * SCOPE:
+    - #PC: Rules affecting Player Characters directly.
+    - #EIDOLON: Rules affecting Partners/Companions.
+    - #HEX: Rules affecting Map navigation or Regional effects.
+    - #FACTION: Rules governing NPC group behavior and tempo.
+  * ZODIAC_ORIGINS:
+    - [Transient]: The Burning Candle. Fast-adapting, short-lived, ambitious. (Baseline: Human/Orc).
+    - [Sylvan]: The Whispering Bloom. Fey-linked, biological cycles of growth and decay.
+    - [Feral]: The Primal Claw. Mammalian instinct, hunters, and beast-kin.
+    - [Herptile]: The Sun-Scale. Cold-blooded resilience, armored stoicism.
+    - [Draconic]: The Eternal Wyrm. Ancient blood, elemental breath, and primal authority.
+    - [Inorganic]: The Soul-Forge. Created spirits, artificial vessels, and cold persistence.
+    - [Hollow]: The Cold Threshold. Undead-adjacent, souls in the doorway of the grave.
+    - [Elemental]: The Bound Storm. Raw planar energy contained in mortal biology.
+    - [Outer]: The Severed Chain. Divine or Infernal influence; fate and transcendence.
+    - [Warped]: The Fractured Eye. Alien, psychic, or mutated; reality-shifting perspective.
+    - [Titanic]: The Burdened Earth. Giant-kin, massive stature, and tectonic strength.
+    - [Pelagic]: The Abyssal Depth. Aquatic, high-pressure, and fluid-hidden life.
+  * MORPHOLOGY_AND_SIZE:
+    - [Bipedal]: Standard two-legged movement and posture.
+    - [Quadruped]: Four-legged movement; affects carrying capacity and mounting.
+    - [Diminutive]: Size: Small or Tiny. Unlocks specific 'underfoot' combat talents.
+    - [Titanic]: Size: Large or bigger. Unlocks specific 'mass-based' combat talents.
+    - [Winged]: Possesses functional wings; prerequisite for flight-based feats.
+    - [Amorphous]: Fluid or semi-solid body; immune to certain physical constraints.
+    - [Insectoid]: Chitinous, multi-limbed, or hive-linked morphology.
+    - [Serpentine]: Limbless or tail-heavy movement; affects grappling and speed.
+  * ESSENCE_AND_BRIDGE:
+    - [Adaptable]: Prerequisite for Metabolic Cross-Pollination (Transient ability).
+    - [Transcendent]: Prerequisite for Exalted/Mythic Tier talents.
+    - [Fey]: Prerequisite for Sylvan/Illusion magic feats.
+    - [Bridge: Primarch]: Special tag allowing [Herptile] to access [Draconic] feats.
+    - [Bridge: Growth]: Special tag allowing size-tier swapping (Anomalous Growth).
+    - [Bridge: Transformation]: Gateway tag for accessing Grim Hollow Transformation tiers.
+  * PROGRESSION_MILESTONES:
+    - [Seed]: Tier 1 (Level 1): Biological and Origin-based traits.
+    - [Emergent]: Tier 2 (Level 5): Cultural and Paragon-based traits.
+    - [Ascended]: Tier 3 (Level 9): Supernatural and Morphological evolution.
+    - [Exalted]: Tier 4 (Level 13): Faction, World, and Transformation milestones.
+    - [Mythic_Apex]: Tier 5 (Level 17+): Quasi-divine and reality-warping capstones.
+### END SOURCE ###
+
+# ==================
+
+
+# === FILE: reference_glossary_secondary.json ===
+
+### DATA SOURCE: reference_glossary_secondary.json ###
+- reference_id: GLOSSARY_SECONDARY_V1
+- usage_instruction: Runner AI must use these tags to define collision, targeting, and environmental interaction.
+* MORPHOLOGY_TAGS:
+  * [BIPEDAL]:
+    - mechanics: Standard 5e movement. Can use all standard equipment/armor without modification.
+    - logic: Default posture for [Transient], [Sylvan], [Outer].
+  * [QUADRUPED]:
+    - mechanics: Carrying capacity is 1.5x. Mountable by [Diminutive] or standard creatures. Requires barding (2x cost).
+    - logic: Found in [Feral] centaurs or specific beast-kin.
+  * [DIMINUTIVE]:
+    - mechanics: Size: Small/Tiny. Can move through spaces occupied by [Titanic] or standard bipedals. Disadvantage on Heavy weapons.
+    - logic: Governs Gnomes, Halflings, and GEPPETTIN logic.
+  * [TITANIC]:
+    - mechanics: Size: Large+. Advantage on STR saves/checks. Can use 'Oversized' weapons (1d4 extra dmg).
+    - logic: Governs Goliaths and Ogresh.
+  * [WINGED]:
+    - mechanics: Enables Flight-tier feats. Flight is disabled if wearing Heavy armor unless specified.
+    - logic: Prerequisite for Aarakocra and high-tier [Draconic] evolution.
+  * [AMORPHOUS]:
+    - mechanics: Can move through gaps as narrow as 1 inch without squeezing. Immune to Grappled/Prone while in fluid state.
+    - logic: Primary tag for [Warped] Slimes and Plasmoids.
+  * [INSECTOID]:
+    - mechanics: Access to 360-degree vision or tremorsense via feats. Can possess secondary limbs for item-holding (not extra attacks).
+    - logic: Primary tag for Thri-kreen.
+* ESSENCE_TAGS:
+  * [ADAPTABLE]:
+    - mechanics: Allows 'Metabolic Cross-Pollination.' Can swap 1 proficiency or feat-selection at long rest (Seed-tier only).
+    - logic: The Human/Transient baseline.
+  * [TRANSCENDENT]:
+    - mechanics: Immune to aging. Grants Advantage on saves against being Charmed or Frightened.
+    - logic: Found in [Outer] and high-tier [Sylvan] heritages.
+  * [BRIDGE: PRIMARCH]:
+    - mechanics: Structural Link: Treat [Herptile] and [Draconic] as the same tag for all prerequisite checks.
+    - logic: Solves the 'Reptile/Dragon' feat gap.
+  * [BRIDGE: TRANSFORMATION]:
+    - mechanics: Gateway: Indicates the character has begun a Grim Hollow Transformation. Updates player.corruption.tier.
+    - logic: Enables the Leap from Heritage to Eldritch Horror.
+### END SOURCE ###
+
+# ==================
+
+
+# === FILE: notebooklm_registry.md ===
+# NBLM RESOURCE REGISTRY — EXTERNAL KNOWLEDGE LIBRARY
+
+**Version:** 1.0 (NBLM Integrated)
+**Authority:** ACDA-Architect
+**Status:** REFERENCE / NBLM SOURCE (Used for validation and mechanical extensions)
+
+This document catalogs files designated as **NBLM (NotebookLM)** sources. These files provide the deep mechanical and thematic context used by the ACDA to audit the campaign and ensure consistency with high-level design patterns (A5E, Sine Nomine, Ghostfire, etc.).
+
+- **ACTIVE:** Mechanics are directly integrated into the current campaign build.
+- **NBLM SOURCE:** Full content is indexed for external cross-referencing, gap detection, and rule validation.
+- **SYNERGY:** Documents with high thematic alignment to the **Grim-Mythic Struggle**.
+
+---
+
+## 1 SYSTEM CORES & ENGINE EXTENSIONS
+
+| Title | Author/System | Status | Usage |
+| :--- | :--- | :--- | :--- |
+| **Ironsworn Rulebook** | Shawn Tomkin | NBLM SOURCE | Oracle logic & Vow mechanics. |
+| **Godbound (Deluxe Edition)** | Sine Nomine | NBLM SOURCE | High-tier Mythic scaling reference. |
+| **Worlds Without Number (Deluxe)** | Sine Nomine | NBLM SOURCE | World-building & Sandbox tools. |
+| **Cities Without Number (Deluxe)** | Sine Nomine | NBLM SOURCE | Faction & Dystopian logic. |
+| **Dungeon Delver's Guide** | Level Up (A5E) | NBLM SOURCE | Advanced Dungeon procedures. |
+| **Trials & Treasures** | Level Up (A5E) | NBLM SOURCE | Exploration & Magic item logic. |
+| **Epic Characters (v2.2)** | Marc Altfuldisch| NBLM SOURCE | Level 20+ progression reference. |
+| **Godbound: A Simple Example Fight**| Sine Nomine | NBLM SOURCE | Combat flow validation. |
+
+---
+
+## 2 HARVESTING, CRAFTING & MONSTER LOGIC
+
+| Title | Author/System | Status | Usage |
+| :--- | :--- | :--- | :--- |
+| **Heliana's Guide to Monster Hunting**| Loot Tavern | NBLM SOURCE | Primary Hunting/Crafting engine. |
+| **Hamund's Harvesting Handbook Vol 1** | Drifters Game | NBLM SOURCE | Monster Manual harvesting data. |
+| **Hamund's Harvesting Handbook Vol 2** | Drifters Game | NBLM SOURCE | Volo's Guide harvesting data. |
+| **Hamund's Harvesting Handbook Vol 3** | Drifters Game | NBLM SOURCE | Mordenkainen's harvesting data. |
+| **The Monsters Know What They’re Doing**| Keith Ammann | NBLM SOURCE | Deterministic NPC combat tactics. |
+| **MOAR! The Monsters Know...** | Keith Ammann | NBLM SOURCE | Advanced tactical behaviors. |
+
+---
+
+## 3 BESTIARIES & COMPANION SYSTEMS
+
+| Title | Author/System | Status | Usage |
+| :--- | :--- | :--- | :--- |
+| **Battlezoo Eldamon (v3.0)** | Roll For Combat | NBLM SOURCE | Companion/Eidolon data reference. |
+| **Monstrous Menagerie** | Level Up (A5E) | NBLM SOURCE | Advanced monster stat-blocks. |
+| **Battlezoo Ancestries: Dragons** | Roll For Combat | NBLM SOURCE | Dragon PC and transformation data. |
+| **Companion System** | Goober Ramsley | NBLM SOURCE | Modular companion logic. |
+| **Mythological Figures & Monsters** | Mike Myler | NBLM SOURCE | Mythic-tier NPC/Monster reference. |
+| **Bloodlines Unbound: Volume 1** | Various | NBLM SOURCE | Sorcerous/Genetic mechanical data. |
+
+---
+
+## 4 SETTINGS & THEMATIC OVERLAYS
+
+| Title | Author/System | Status | Usage |
+| :--- | :--- | :--- | :--- |
+| **Grim Hollow: Campaign Guide (2024)**| Ghostfire Gaming | **ACTIVE** | Core Tone & World authority. |
+| **Adventures in ZEITGEIST** | EN Publishing | NBLM SOURCE | Industrial/Deterministic themes. |
+| **The Delver's Guide to Beast World** | Heart of Ethos | NBLM SOURCE | Crew & Biome logic. |
+| **Book of Exalted Darkness** | SoTDL | NBLM SOURCE | Visceral horror/vile themes. |
+| **Tome of Marvelous Magic II** | Mordenkainen | NBLM SOURCE | Artifact & Curio reference. |
+
+---
+
+**ACDA Audit Note:**
+1. These sources are used to **validate** the deterministic outputs of the Runner AI.
+2. If a system gap is detected (e.g., Harvesting rules), the ACDA refers to *Heliana's* or *Hamund's* to propose a deterministic fix.
+3. This registry ensures the AI doesn't hallucinate "rules of thumb" but instead uses the specific mechanical logic found in these files.
+
+# ==================
+
+
+# === FILE: source_registry.md ===
+# SOURCE REGISTRY — MASTER RESOURCE CATALOG
+
+**Version:** 1.0 (Comprehensive)
+**Authority:** ACDA-Architect
+**Status:** REFERENCE / INACTIVE (Unless enabled in `GAME_STATE`)
+
+This document serves as the global library of all possible sources available for the campaign.
+- **ACTIVE:** Mechanics are currently loaded into the Runner AI's deterministic logic.
+- **REFERENCE:** Data is indexed but currently **inactive**. These titles are used for future expansion, mechanical swapping, or content updates.
+- **LEGACY [ʟ]:** Older versions of content (e.g., 2014 Core) kept for historical reference or specific mechanical porting.
+
+---
+
+## 1 CORE RULEBOOKS
+
+| Category | Title | Version/Date | Status |
+| :--- | :--- | :--- | :--- |
+| Core [ʟ] | Player's Handbook (2014) | Aug 18, 2014 | **LEGACY** |
+| Core [ʟ] | Monster Manual (2014) | Sep 29, 2014 | **LEGACY** |
+| Core [ʟ] | Dungeon Master's Guide (2014) | Dec 8, 2014 | **LEGACY** |
+| Core | Player's Handbook (2024) | Sep 16, 2024 | **ACTIVE** |
+| Core | Dungeon Master's Guide (2024) | Nov 11, 2024 | **ACTIVE** |
+| Core | Monster Manual (2025) | Feb 17, 2025 | **ACTIVE** |
+
+---
+
+## 2 OFFICIAL SUPPLEMENTS
+
+| Category | Title | Status |
+| :--- | :--- | :--- |
+| Supplements [ʟ] | Volo's Guide to Monsters | **LEGACY** |
+| Supplements [ʟ] | Mordenkainen's Tome of Foes | **LEGACY** |
+| Supplements | Xanathar's Guide to Everything | REFERENCE |
+| Supplements | Tasha's Cauldron of Everything | REFERENCE |
+| Supplements | Fizban's Treasury of Dragons | REFERENCE |
+| Supplements | Mordenkainen Presents: Monsters of the Multiverse | REFERENCE |
+| Supplements | Bigby Presents: Glory of the Giants | REFERENCE |
+| Supplements | The Book of Many Things | REFERENCE |
+| Supplements | The Deck of Many Things: Card Reference Guide | REFERENCE |
+| Supplements | Acquisitions Incorporated | REFERENCE |
+| Supplements | Monsters of Drakkenheim (2025) | REFERENCE |
+
+---
+
+## 3 OFFICIAL SETTINGS
+
+| Category | Title | Status |
+| :--- | :--- | :--- |
+| Settings | Sword Coast Adventurer's Guide | REFERENCE |
+| Settings | Guildmasters' Guide to Ravnica | REFERENCE |
+| Settings | Eberron: Rising from the Last War | REFERENCE |
+| Settings | Explorer's Guide to Wildemount | REFERENCE |
+| Settings | Mythic Odysseys of Theros | REFERENCE |
+| Settings | Van Richten's Guide to Ravenloft | REFERENCE |
+| Settings | Strixhaven: A Curriculum of Chaos | REFERENCE |
+| Settings | Tal'Dorei Campaign Setting Reborn | REFERENCE |
+| Settings | Astral Adventurer's Guide | REFERENCE |
+| Settings | Boo's Astral Menagerie | REFERENCE |
+| Settings | Morte's Planar Parade | REFERENCE |
+| Settings | Sigil and the Outlands | REFERENCE |
+| Settings | Forgotten Realms: Adventures in Faerûn (2025) | REFERENCE |
+| Settings | Forgotten Realms: Heroes of Faerûn (2025) | REFERENCE |
+| Settings | Eberron: Forge of the Artificer (2025) | REFERENCE |
+
+---
+
+## 4 ADDITIONAL SETTINGS & PLANE SHIFT
+
+| Category | Title | Status |
+| :--- | :--- | :--- |
+| Add. Settings | Plane Shift: Zendikar | REFERENCE |
+| Add. Settings | Plane Shift: Innistrad | REFERENCE |
+| Add. Settings | Plane Shift: Kaladesh | REFERENCE |
+| Add. Settings | Plane Shift: Amonkhet | REFERENCE |
+| Add. Settings | Plane Shift: Ixalan | REFERENCE |
+| Add. Settings | Plane Shift: Dominaria | REFERENCE |
+| Add. Settings | Netheril's Fall (2025) | REFERENCE |
+| Add. Settings | Lorwyn: First Light (2025) | REFERENCE |
+
+---
+
+## 5 EXTRAS & THIRD-PARTY (MCDM, GHOSTFIRE, ETC.)
+
+| Category | Title | Status |
+| :--- | :--- | :--- |
+| Extras | Flee, Mortals! (MCDM) | REFERENCE |
+| Extras | Where Evil Lives: The MCDM Book of Boss Battles | REFERENCE |
+| Extras | The Illrigger Revised (MCDM) | REFERENCE |
+| Extras | Grim Hollow: Player Pack | REFERENCE |
+| Extras | Grim Hollow: Player's Guide (2024/2025) | **ACTIVE** |
+| Extras | Valda's Spire of Secrets: Player Pack | REFERENCE |
+| Extras | Astarion's Book of Hungers (2025) | REFERENCE |
+| Extras | Tome of Beasts 1 (2023 Edition) | REFERENCE |
+| Extras | Griffon's Saddlebag Book 2 | REFERENCE |
+| Extras | Book of Ebon Tides | REFERENCE |
+| Extras | Minsc and Boo's Journal of Villainy | REFERENCE |
+| Extras | One Grung Above | REFERENCE |
+| Extras | Domains of Delight | REFERENCE |
+
+---
+
+## 6 HOMEBREW & MODULAR SYSTEMS
+
+| Category | Title | Author/Series | Status |
+| :--- | :--- | :--- | :--- |
+| Homebrew | Deep Magic 1-12 (Series) | Kobold Press | REFERENCE |
+| Homebrew | Deep Magic 17: Mythos Magic | Kobold Press | REFERENCE |
+| Homebrew | Warlock 2: Dread Magic | Kobold Press | REFERENCE |
+| Homebrew | Strongholds and Followers | MCDM | REFERENCE |
+| Homebrew | Kingdoms & Warfare | MCDM | REFERENCE |
+| Homebrew | Beastheart and Monstrous Companions | MCDM | REFERENCE |
+| Homebrew | Arcadia Issues 1–27 | MCDM | REFERENCE |
+| Homebrew | Kibbles' Crafting Guide | KibblesTasty | REFERENCE |
+| Homebrew | Kibbles' Compendium of Legends | KibblesTasty | REFERENCE |
+| Homebrew | Steinhardt's Guide to the Eldritch Hunt | MonkeyDM | REFERENCE |
+| Homebrew | Grim Hollow: The Campaign Guide (2014) | Ghostfire [ʟ] | **LEGACY** |
+| Homebrew | Grim Hollow: The Player's Guide (2014) | Ghostfire [ʟ] | **LEGACY** |
+| Homebrew | Stibbles Codex of Companions | Ghostfire | REFERENCE |
+| Homebrew | The Talent and Psionics | MCDM | REFERENCE |
+| Homebrew | Guide to Magical Tattoos v4 | Ukyo | REFERENCE |
+
+---
+
+## 7 PRERELEASE & UNEARTHED ARCANA
+
+| Category | Title | Version/Date | Status |
+| :--- | :--- | :--- | :--- |
+| Prerelease | UA: Into The Wild | Feb 11, 2018 | REFERENCE |
+| Prerelease | UA 2023: Bastions and Cantrips | Oct 4, 2023 | REFERENCE |
+| Prerelease | UA 2024: The Artificer | Dec 16, 2024 | REFERENCE |
+| Prerelease | UA 2025: Horror Subclasses | May 5, 2025 | REFERENCE |
+| Prerelease | UA 2025: Apocalyptic Subclasses | Aug 20, 2025 | REFERENCE |
+| Prerelease | UA 2026: Mystic Subclasses | Jan 14, 2026 | REFERENCE |
+
+---
+
+## 8 UTILITY, SCREENS, & FLAVOR
+
+| Category | Title | Status |
+| :--- | :--- | :--- |
+| Screens [ʟ] | Dungeon Master's Screen (Original) | **LEGACY** |
+| Screens | Dungeon Master's Screen (2024) | REFERENCE |
+| Screens | DM Screen: Wilderness Kit | REFERENCE |
+| Screens | DM Screen: Dungeon Kit | REFERENCE |
+| Recipes | Heroes' Feast | REFERENCE |
+| Recipes | Puncheons and Flagons | REFERENCE |
+| Misc | Sage Advice Compendium (2014) | **LEGACY** |
+| Misc | Sage Advice Compendium (2025) | REFERENCE |
+
+---
+
+**Audit Instructions for AI:**
+1. This file is for **Reference only**.
+2. Do not pull mechanics from **REFERENCE** or **LEGACY** titles unless the user provides a direct command or the `GAME_STATE` marks them as **ACTIVE**.
+3. Use these titles to suggest content swaps or thematic expansions when requested.
+
+# ==================
+
+
+# === FILE: master_rule_index.json ===
+
+### DATA SOURCE: master_rule_index.json ###
+* PROJECT_METADATA:
+  - name: Eclipsed Realms: Dark Mythic Struggle
+  - version: 1.3.0
+  - architect: ACDA (Advanced Campaign Development Assistant)
+  - tone_enforcement: Grim-Mythic (Locked)
+* CORE_AUTHORITY:
+  * CAMPAIGN_BIBLE:
+    - path: campaign/campaign_bible.md
+    - description: Absolute source of truth for campaign rules and hierarchy.
+    - authority: AXIOMATIC
+  * GAME_STATE_SCHEMA:
+    - path: campaign/campaign_state_schema_v1.1.json
+    - description: JSON schema definition for the active GAME_STATE artifact.
+    - authority: AXIOMATIC
+  * APPENDIX_CONTROL:
+    - path: campaign/appendix_control.md
+    - description: Registry of active/inactive optional systems.
+    - authority: CANONICAL
+* REGISTRIES:
+  * SOURCE_REGISTRY:
+    - path: campaign/source_registry.md
+    - description: List of allowed external sourcebooks and homebrew PDFs.
+    - authority: CANONICAL
+  * ADVENTURE_REGISTRY:
+    - path: campaign/adventure_registry.md
+    - description: Registry of active adventure modules and hex locations.
+    - authority: CANONICAL
+  * HERITAGE_WOTC:
+    - path: campaign/reference_heritages_wotc.json
+    - description: Standard WotC heritages mapped to Zodiac Origins (Humanoid tag removed).
+    - authority: CANONICAL
+  * HERITAGE_3RDPARTY:
+    - path: campaign/reference_heritages_3rdparty.json
+    - description: 3rd party/homebrew heritages mapped to Zodiac Origins.
+    - authority: CANONICAL
+* MECHANICS_ENGINES:
+  * ZODIAC_ENGINE:
+    - path: campaign/reference_zodiac_engine.json
+    - description: The 12 Metaphysical Origins, Zodiac Symbols, and Lore Resonance.
+    - authority: AXIOMATIC
+  * FEAT_DATABASE:
+    - path: campaign/reference_feats_leveled.json
+    - description: Multi-tag leveled feat database following Battlezoo (1/5/9/13/17) progression.
+    - authority: CANONICAL
+* PROCEDURES:
+  * CHARACTER_CREATION:
+    - path: campaign/procedures/tapestry_of_fate.md
+    - description: Phase-based character creation procedure (v1.3).
+    - authority: MANDATORY
+  * GENERAL_PROCEDURES:
+    - path: campaign/procedures/procedures.md
+    - description: Standard operating procedures for the Runner AI.
+    - authority: CANONICAL
+* SYSTEM_INDEXES:
+  - class_framework: systems/class_framework/
+  - eidolon_framework: systems/eidolon_framework/
+  - data_archive: data.zip/generated/
+### END SOURCE ###
+
+# ==================

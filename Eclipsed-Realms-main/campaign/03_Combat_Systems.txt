@@ -1,0 +1,874 @@
+METADATA_HEADER
+TYPE: Procedural_Mechanics
+SYSTEMS: Writs, Fray, Procedures, Magic
+DATE_GENERATED: 2026-01-28 17:44:07.169745
+---
+
+TABLE OF CONTENTS:
+- appendix_writs_system.md
+- appendix_writs_features.md
+- appendix_fray_system.md
+- appendix_fray_dice_reference.md
+- appendix_epic_archetypes.md
+- procedures.md
+- tapestry_of_fate.md
+- master_rule_index_procedures.md
+- appendix_procedures.md
+
+---
+
+
+# === FILE: appendix_writs_system.md ===
+# APPENDIX — WRITS SYSTEM (EXECUTABLE)
+
+## SYSTEM ROLE
+This appendix defines the Writs System.
+Optional subsystem activated at campaign start.
+
+If inactive, no Writs exist and no Effort is tracked.
+
+---
+
+## STATE DEPENDENCY
+Requires GAME_STATE fields:
+- player.effort.current
+- player.effort.max
+- player.effort.committed[]
+
+If missing, system inactive.
+
+---
+
+## EFFORT RESOURCE
+
+### Maximum
+Effort Max = Proficiency Bonus + Highest Ability Modifier
+Recalculate only when:
+- Proficiency Bonus changes
+- Ability Score changes
+
+---
+
+### Committing Effort
+Trigger: Activation of a Writ  
+Authority: Player declaration  
+Cost: Commit Effort equal to Writ cost (default = 1)
+
+Committed Effort moves from:
+player.effort.current → player.effort.committed[]
+Each entry records:
+- writ_id
+- commit duration: turn | scene | day
+- timestamp
+
+---
+
+### Recovery Procedure
+
+**Turn Commitment**
+- Trigger: Start of player's next turn
+- Action: Remove from committed[] and restore Effort
+
+**Scene Commitment**
+- Trigger: Encounter end OR 1 minute elapsed
+- Action: Restore Effort
+
+**Day Commitment**
+- Trigger: Long Rest completion
+- Action: Restore Effort
+
+No other recovery methods exist unless explicitly stated.
+
+---
+
+## WRIT ACQUISITION
+- First Writ at level 3
+- One Writ every 2 levels
+- Writs are chosen, not rolled
+- Replacement requires Long Rest and explicit declaration
+
+---
+
+## EXECUTION CONSTRAINTS
+- Cannot activate without sufficient Effort
+- Cannot override Epic Archetype features
+- Cannot negate Fray damage
+- Cannot invalidate Corruption effects
+
+Higher-priority system rules override conflicts.
+
+---
+
+## ORACLE RESTRICTION
+Oracle checks **never**:
+- Alter Writ effects
+- Modify Effort costs
+- Extend durations
+
+---
+
+**End of File**
+
+# ==================
+
+
+# === FILE: appendix_writs_features.md ===
+# APPENDIX — WRITS FEATURE DEFINITIONS
+
+Each Writ defines:
+Trigger | Cost | Duration | Effect | State Impact
+
+No interpretation allowed; fully executable.
+
+---
+
+## UNIVERSAL WRITS
+
+### Heroic Surge
+Trigger: Player Turn  
+Cost: Commit Effort (Turn)  
+Effect: Gain 1 additional Action  
+Restriction: Cannot cast spells ≥1 level with this Action  
+State Impact: None
+
+### Unyielding Purpose
+Trigger: Failed Saving Throw  
+Cost: Commit Effort (Turn)  
+Effect: Treat the saving throw as success  
+State Impact: None
+
+### Phoenix Mantle
+Trigger: HP would be reduced to 0  
+Cost: Commit Effort (Day)  
+Effect:
+- HP becomes 1
+- Temporary HP = 2 × character level  
+State Impact: Record Writ usage (once per Day)
+
+### Timeless Soul
+Trigger: Passive  
+Cost: Commit Effort (Day) during Short Rest  
+Effect: Remove 1 Exhaustion level  
+State Impact: Update exhaustion
+
+---
+
+## MARTIAL WRITS
+
+### Inevitable Strike
+Trigger: Missed weapon attack  
+Cost: Commit Effort (Turn)  
+Effect: Treat attack roll as 10  
+State Impact: None
+
+### Iron Juggernaut
+Trigger: Bonus Action  
+Cost: Commit Effort (Scene)  
+Effect: Gain resistance to Bludgeoning/Piercing/Slashing for 1 minute  
+State Impact: Track duration
+
+### Sentinel’s Vigil
+Trigger: Passive  
+Cost: None  
+Effect:
+- Cannot be surprised
+- Add Proficiency Bonus to Initiative  
+State Impact: None
+
+### Sundering Force
+Trigger: Weapon hit  
+Cost: Commit Effort (Turn)  
+Effect: Target AC −2 until end of next turn  
+State Impact: Track debuff
+
+---
+
+## SKILLFUL WRITS
+
+### Peerless Craft
+Trigger: Skill or Tool Check (proficient)  
+Cost: Commit Effort (Turn)  
+Effect: Treat d20 roll as 20  
+State Impact: None
+
+### Master’s Eye
+Trigger: Bonus Action  
+Cost: Commit Effort (Scene)  
+Effect: Truesight 60 ft for 1 minute  
+State Impact: Track duration
+
+### Shadow-Wraith
+Trigger: Bonus Action  
+Cost: Commit Effort (Scene)  
+Effect:
+- Hide without cover
+- No tracks/scent for 10 minutes  
+State Impact: Track duration
+
+### Sagacious Mind
+Trigger: Passive  
+Cost: None  
+Effect: Advantage on Intelligence (Lore) checks  
+State Impact: None
+
+---
+
+## SORCEROUS WRITS
+
+### Arcane Font
+Trigger: Bonus Action  
+Cost: Commit Effort (Day)  
+Effect: Regain 1 expended spell slot ≤ Proficiency Bonus  
+State Impact: Update spell slots
+
+### Spell-Shattering
+Trigger: Reaction to spell  
+Cost: Commit Effort (Turn)  
+Effect: Cast Counterspell or Dispel Magic at PB level  
+State Impact: None
+
+### Unbroken Thread
+Trigger: Bonus Action  
+Cost: Commit Effort (Scene)  
+Effect: Ignore concentration loss from damage for 1 minute  
+State Impact: Track duration
+
+### Transmuted Will
+Trigger: Casting a spell  
+Cost: Commit Effort (Turn)  
+Effect: Change required saving throw  
+State Impact: None
+
+---
+
+**End of File**
+
+# ==================
+
+
+# === FILE: appendix_fray_system.md ===
+# APPENDIX — RESONANCE LASH (FRAY SYSTEM v2.0)
+Version: 2.0 (Architect Edition)
+
+## SYSTEM ROLE
+The **Resonance Lash** represents the dangerous, automatic bleed of mythic power from a Gestalt character and their Eidolon. It automatically thins the ranks of lesser foes but creates a "Resonance Spike" that risks corruption and attracts hostile factions.
+
+---
+
+## 1. CORE MECHANIC: THE LASH
+Every turn in combat, the Player Character (PC) may deal automatic damage to one creature within 15 feet.
+
+* **Targeting Constraint**: The target must have a Challenge Rating (CR) less than the PC's current level.
+* **Action Economy**: Using the Lash does not require an action or reaction; it is an innate pressure effect.
+* **Damage Type**: The damage type is determined by the **Primary Eidolon's Element** (e.g., Fire, Cold, Radiant).
+
+---
+
+## 2. DETERMINISTIC SCALING
+The Lash die scales with the PC's total level to reflect their ascending mythic presence.
+
+| PC Level | Lash Die | Notes |
+| :--- | :--- | :--- |
+| **1–4** | **1d4** | Faint distortion in the veil. |
+| **5–10** | **1d6** | Audible humming; local flora may wilt. |
+| **11–16** | **1d8** | Visual static; shadows dance out of sync. |
+| **17–20** | **1d10** | The veil tears; reality groans in the PC's wake. |
+
+---
+
+## 3. THE GRIM TOLL: RESONANCE RISK
+In accordance with the **Grim-Mythic** campaign axis, excessive power has a cost.
+
+* **Trigger**: Whenever the Lash die rolls its **maximum value** (e.g., a 4 on a d4), the PC's essence bleeds into the surroundings.
+* **State Update**: Increment `game_state.player.corruption.resonance` by **1**.
+* **Consequence**: High Resonance increases the likelihood of a **Resonance Collapse** or immediate detection by the **Intruder** or hostile **Factions**.
+
+---
+
+## 4. MYTHIC SYNERGY: DESPERATION SPIKE
+When the PC is pushed to their limit, their mythic essence lashes out with uncontrolled fury.
+
+* **Bloodied Condition**: If the PC is below **50% of their Maximum Hit Points**, the Resonance Lash does not require a roll.
+* **Automatic Outcome**: Deal **Maximum Damage** for your current Lash Die tier (e.g., 6 damage if in the 1d6 tier).
+* **Trade-off**: This automatic damage still triggers the **Resonance Risk** (State Update: +1 Resonance) for every turn it is active.
+
+---
+
+## 5. GESTALT SYNERGY
+If the **Class Framework Overlay** is active, apply the following:
+
+* **Dual Martial (#MARTIAL + #MARTIAL)**: You may split the Lash damage between two eligible targets.
+* **Mystic Hybrid (#MARTIAL + #CASTER)**: The damage type becomes **Symbolic** (Force or Psychic), ignoring resistances of non-Mythic creatures.
+
+---
+
+## EXIT CONDITION
+- Damage applied to target.
+- Resonance checked and updated in `GAME_STATE`.
+
+# ==================
+
+
+# === FILE: appendix_fray_dice_reference.md ===
+# APPENDIX — RESONANCE LASH REFERENCE TABLE
+Version: 2.0 (Deterministic Matrix)
+
+## LASH DAMAGE MATRIX
+| Level | Die | Max Roll (Risk Trigger) | Desperation (Max Dmg) |
+| :--- | :--- | :--- | :--- |
+| 1 | 1d4 | 4 | 4 |
+| 2 | 1d4 | 4 | 4 |
+| 3 | 1d4 | 4 | 4 |
+| 4 | 1d4 | 4 | 4 |
+| 5 | 1d6 | 6 | 6 |
+| 6 | 1d6 | 6 | 6 |
+| 7 | 1d6 | 6 | 6 |
+| 8 | 1d6 | 6 | 6 |
+| 9 | 1d6 | 6 | 6 |
+| 10 | 1d6 | 6 | 6 |
+| 11 | 1d8 | 8 | 8 |
+| 12 | 1d8 | 8 | 8 |
+| 13 | 1d8 | 8 | 8 |
+| 14 | 1d8 | 8 | 8 |
+| 15 | 1d8 | 8 | 8 |
+| 16 | 1d8 | 8 | 8 |
+| 17 | 1d10 | 10 | 10 |
+| 18 | 1d10 | 10 | 10 |
+| 19 | 1d10 | 10 | 10 |
+| 20 | 1d10 | 10 | 10 |
+
+## ELEMENTAL DAMAGE TAGS
+| Primary Eidolon | Lash Damage Type | Narrative Effect Tag |
+| :--- | :--- | :--- |
+| Fire | Fire | #Scorching |
+| Cold | Cold | #Chilling |
+| Electric | Lightning | #Crackling |
+| Spirit | Psychic | #Haunting |
+| Earth | Magical Bludgeoning | #Crushing |
+| Light | Radiant | #Blinding |
+| Dark | Necrotic | #Withering |
+
+---
+**AI Instruction**: Do not roll the Lash Die if the PC is Bloodied (<50% HP). Apply the 'Desperation' value directly and update Resonance.
+
+# ==================
+
+
+# === FILE: appendix_epic_archetypes.md ===
+# APPENDIX — EPIC ARCHETYPES
+
+## SYSTEM ROLE
+Epic Archetypes replace subclass progression at levels 21–30.
+
+They do NOT replace:
+- Core Epic Class features
+- Spellcasting progression
+- Saving throws
+
+---
+
+## ACTIVATION
+This appendix is inactive unless Epic Levels are enabled at campaign start.
+
+---
+
+## FEATURE TIMING
+Epic Archetype features are gained at:
+- Level 22
+- Level 25
+- Level 28
+
+---
+
+## EXECUTION RULE
+If Epic Characters source defines a subclass feature at a level,
+use the Epic Archetype feature instead.
+
+---
+
+## EXAMPLE ARCHETYPE FORMAT
+Each feature defines:
+- Trigger
+- Frequency
+- Effect
+- State Impact
+
+---
+
+## ARCHETYPE: ARCANE SOVEREIGN
+Classes: Wizard
+
+### Flexible Formula
+Trigger: Spell cast  
+Frequency: At-will  
+Effect: Increase or decrease spell range by one category  
+State Impact: None
+
+### Absolute Casting
+Trigger: Spell cast  
+Frequency: 1/Long Rest  
+Effect: Cast spell ≤6th level without expending slot  
+State Impact: Track usage
+
+### Spell Supremacy
+Trigger: Spell saving throw success  
+Frequency: Once per turn  
+Effect: Target suffers reduced effect  
+State Impact: None
+
+---
+
+(Other archetypes follow identical formatting rules.)
+
+---
+
+**End of File**
+
+# ==================
+
+
+# === FILE: procedures.md ===
+# CAMPAIGN PROCEDURES — EXECUTION LAYER
+
+## PURPOSE
+Defines all AI-executable loops, checks, and deterministic updates.
+
+Rules:
+
+1. All procedures read and write to `GAME_STATE`.
+2. No hidden memory or derived assumptions.
+3. All randomness must use explicit dice or tables.
+4. Procedures respect Appendix activation flags.
+5. Companion System selection is enforced.
+
+---
+
+## 1. CAMPAIGN START PROCEDURE
+
+### Trigger
+New campaign initialization
+
+### Steps
+1. Load `AI_SYSTEM_PROMPT.md`.
+2. Load `CAMPAIGN_BIBLE.md`.
+3. Initialize `GAME_STATE` according to schema.
+4. Present **Appendix activation choices** to player:
+
+   - Writs
+   - Fray
+   - Epic Levels
+   - Transformations
+   - Dominion (reserved)
+   - Mythic GME
+   - Eidolon Framework (yes/no)
+
+5. Record all selections in `GAME_STATE.appendices`.
+6. Lock appendix activation; permanent unless versioned reconfiguration exists.
+
+---
+
+## 2. TURN LOOP PROCEDURE
+
+### Trigger
+Start of player turn
+
+### Steps
+1. Recover Effort:
+
+   - Remove `committed[]` entries with duration = Turn
+   - Update `player.effort.current`
+
+2. Apply Writ triggers (if active)
+3. Apply Fray (if active)
+4. Process Companion actions:
+
+   - Standard Companion Model: follow MCDM / Stibbles rules
+   - Eidolon Framework: process evolution triggers, mode effects
+
+5. Log all state changes to `logs.state_changes`
+
+---
+
+## 3. SCENE LOOP PROCEDURE
+
+### Trigger
+Start of a new encounter or narrative scene
+
+### Steps
+1. Apply Effort recovery (Scene duration)
+2. Evaluate Companion evolution triggers:
+
+   - Seed Core → Emergent → Ascended → Exalted → Mythic Apex
+   - Apply behavioral and mutation axes
+
+3. Resolve Fray (if active)
+4. Queue Oracle checks for undefined outcomes only
+5. Log all changes
+
+---
+
+## 4. DAY LOOP PROCEDURE
+
+### Trigger
+Completion of 24 hours or Long Rest
+
+### Steps
+1. Recover Effort (Day duration)
+2. Process companion health and status updates
+3. Reset temporary Mode Changes
+4. Clear turn- and scene-bound Writ usage
+5. Log all state changes
+
+---
+
+## 5. FAILURE RESOLUTION PROCEDURE
+
+### Trigger
+HP ≤ 0, Corruption threshold crossed, or other critical failure
+
+### Steps
+1. Apply mechanical consequences:
+
+   - Capture
+   - Injury
+   - Corruption increase
+   - Companion harm
+   - Faction influence loss
+   - Hex destabilization
+
+2. Death occurs only if explicitly declared
+3. Advance `GAME_STATE` to reflect outcomes
+4. Log all changes
+
+---
+
+## 6. ORACLE CHECK PROCEDURE
+
+### Trigger
+No rule, table, or hex resolves the query
+
+### Steps
+1. Roll `Oracle Check` using Mythic GME rules
+2. Record question, roll, result, likelihood, and timestamp in `GAME_STATE.oracle_log`
+3. Apply only Fate check outcomes (`yes | no | exceptional yes | exceptional no`)
+4. Cannot modify mechanics, Writs, Fray, or Companion state
+
+---
+
+## 7. COMPANION EVOLUTION PROCEDURE
+
+### Trigger
+Resonance level threshold crossed, narrative milestone reached, or Appendix rules
+
+### Steps
+1. Check current life stage of companion
+2. If evolution conditions met:
+
+   - Update `companion.resources.hp_max` / `hp_current`
+   - Apply Aspect Mutations
+   - Apply Mode Changes if triggered
+   - Log state changes
+
+3. Eidolon Framework:
+
+   - Enforce exclusivity of Eidolons vs Stibbles
+   - Track Aspect Mutations and Resonance Levels
+   - Apply True Life Stage mechanics
+
+---
+
+## 8. APPENDIX PROCEDURE ENFORCEMENT
+
+- If Appendix is active:
+
+  - Execute related mechanics
+  - Track state fields
+
+- If Appendix is inactive:
+
+  - Skip rules
+  - Ensure state fields remain unused
+
+---
+
+## 9. LOGGING RULE
+
+- Every procedure writes to:
+
+  - `logs.rolls[]` for all dice
+  - `logs.state_changes[]` for all changes
+  - `oracle_log[]` for all Mythic checks
+
+- Execution halts if a required state field is missing
+
+---
+
+## 10. ERROR HANDLING
+
+- If procedure requires a field that does not exist:
+
+  - Halt execution
+  - Report error
+  - Do not infer
+
+# ==================
+
+
+# === FILE: tapestry_of_fate.md ===
+# THE TAPESTRY OF FATE
+Version: 1.6 (Integrated Architecture)
+
+---
+metadata:
+  id: character_creation_core
+  tags: [#PROCEDURE, #CORE, #PC_INIT]
+  authority: Master Rule Index
+  requires_appendices: [writs, fray, eidolon_framework]
+---
+
+## OVERVIEW
+Character creation proceeds in the following order:
+I. Tapestry of Fate (Chronicle, Drive, & Writs)
+II. The Vessel (Heritage, Culture, & Homeland)
+III. The Talent (Gestalt & Class Framework)
+IV. History & Profession (Background)
+V. Power & Progression (Level & Fray Setup)
+VI. The Soulbound Pact (Eidolon & Transformation)
+VII. The Esoteric (Dynamic Appendix Injections)
+VIII. Journey Readiness (Finalization)
+
+---
+
+## PHASE I — CHRONICLE & WRITS
+1. **Select Heroic Drive**: Choose ONE Supernatural Gift (Theros) or Advanced Background Feature (Grim Hollow).
+2. **Resolve Heroic Chronicle**: Use Wildemount rules. **#GRIM Filter**: Any 'Ally' becomes a 'Tragic Debtor'.
+3. **Select Destiny**: Choose ONE Destiny (Level Up: A5E).
+4. **Issue Initial Writ**: Generate ONE Starting Writ from `appendices/appendix_writs_system.md`.
+
+---
+
+## PHASE II — THE VESSEL (ORIGINS)
+1. **Heritage**: Consult `reference_heritages_wotc.json` and `3rdparty.json`. Mixed Heritages enabled.
+2. **Culture**: Select ONE Culture from *Level Up: A5E*.
+3. **Homeland**: Choose ONE from the registry below. Sets **Origin Hex**.
+
+| Homeland | Features (Select 2) | Narrative Tool |
+| :--- | :--- | :--- |
+| **Allemance** | Persuasion, High Imperial, *Guidance* | **Bureaucratic Weight**: Bypass minor security. |
+| **Littfeld** | Land Vehicles, *Mending*, Animal Handling | **Caravan Network**: Guaranteed safe Wagon parking. |
+| **Oria** | Survival, Smith’s Tools, Cold Resistance | **Cold Hearth Wisdom**: Improve disposition via tales. |
+| **The Maw** | Investigation, Thieves' Tools, *Light* | **Scavenger’s Eye**: Identify curio value instantly. |
+| **Vinyot** | Athletics, Water Vehicles, *Thaumaturgy* | **Tide-Speaker**: Social advantage with sea-factions. |
+| **The Lodge** | Stealth, Herbalism Kit, Nature | **Wilder-Sense**: Negate 1 Night Encounter. |
+
+---
+
+## PHASE III — THE TALENT (GESTALT)
+1. **Gestalt Selection**: Primary + Secondary Class.
+2. **Framework Injection**: Apply `systems/class_framework/class_overlays.md`. 
+   - 5e Classes gain A5E Knacks and Maneuver pools.
+3. **Merging**: Use higher Hit Die. Saving Throws/Proficiencies combine. Spell slots remain separate.
+
+---
+
+## PHASE IV — HISTORY (GHAB)
+1. **Source**: *Grim Hollow Player’s Guide* (2024).
+2. **Chassis**: Use D&D 2024 Background for ASIs/Origin Feat.
+3. **Progression**: Assign one of the 8 GHAB Paths (Academic, Aristocrat, etc.).
+
+---
+
+## PHASE V — POWER & LASH
+1. **Level**: Start at Level 3.
+2. **Resonance Lash**: Initialize per `appendices/appendix_fray_system.md`.
+   - Die: 1d4. Max roll = +1 Resonance.
+3. **Maneuver DC**: 8 + Prof + (STR or DEX).
+
+---
+
+## PHASE VI — THE PACT
+1. **Eidolon**: Consult `systems/eidolon_framework/partner_creation.md`.
+2. **Transformation**: Optional Tier 1 Grim Hollow Transformation.
+
+---
+
+## EXIT CONDITION
+- `GAME_STATE` populated. Proceed to **Origin Hex**.
+
+# ==================
+
+
+# === FILE: master_rule_index_procedures.md ===
+# MASTER RULE INDEX PROCEDURES — EXECUTION LAYER
+
+## PURPOSE
+Enforce deterministic lookup for all rule terms. Prevents implicit knowledge or unauthorized source use.
+
+---
+
+## 1. RULE LOOKUP PROCEDURE
+
+### Trigger
+Any time a mechanic, feature, or term is referenced
+
+### Steps
+1. Query `master_rule_index.json` for the term
+2. If multiple entries exist, select the one with **lowest priority value**
+3. Verify the `definition_source` is active:
+   - Core systems: always available
+   - Appendix flagged `true` in `GAME_STATE.appendices`
+   - Inactive appendices cannot be used
+4. If no entry found, **halt execution** and log error
+5. If entry found:
+   - Return `mechanic_summary` and `reference`
+   - Apply as per procedure rules
+   - Log usage in `logs.state_changes`
+
+---
+
+## 2. PRIORITY ENFORCEMENT
+
+1. Campaign Bible > Grim Hollow > D&D 5e > Supplements > Oracle
+2. Index may override secondary sources for deterministic execution
+3. Any conflict must respect the priority above
+4. Log conflicts and resolutions
+
+---
+
+## 3. PDF REFERENCE RULE
+
+1. PDFs may be consulted **only** to confirm mechanics
+2. PDFs may **not** introduce new mechanics or terms
+3. Any attempt to derive mechanics outside the index triggers execution halt
+
+# ==================
+
+
+# === FILE: appendix_procedures.md ===
+# APPENDIX PROCEDURES — EXECUTABLE LAYER
+
+## PURPOSE
+Defines AI-executable procedures for all active appendices. Must reference `GAME_STATE` and respect appendix activation flags.
+
+---
+
+## 1. WRITS PROCEDURE
+
+### Trigger
+Player activates a Writ
+
+### Steps
+1. Verify `GAME_STATE.appendices.writs = true`
+2. Check `player.effort.current >= Writ.cost`
+3. Commit Effort:
+
+   - Subtract from `player.effort.current`
+   - Append entry to `player.effort.committed[]`:
+
+     ```
+     {
+       "writ_id": "string",
+       "duration": "turn|scene|day",
+       "commit_time": "ISO-8601 timestamp"
+     }
+     ```
+
+4. Apply Writ Effect (as defined in `/appendices/appendix_writs_features.md`)
+5. Log state changes
+6. If insufficient Effort, abort and notify
+
+---
+
+## 2. WRITS RECOVERY PROCEDURE
+
+### Trigger
+Turn / Scene / Day resolution
+
+### Steps
+1. Remove `committed[]` entries whose duration expired
+2. Restore corresponding Effort to `player.effort.current`
+3. Log all changes
+
+---
+
+## 3. FRAY PROCEDURE
+
+### Trigger
+End of Round or as specified
+
+### Steps
+1. Verify `GAME_STATE.appendices.fray = true`
+2. Evaluate Fray conditions:
+
+   - PC outnumbered
+   - Engaged with Elite/Mythic
+   - Environmental hazard
+   - Combat exceeds 3 rounds
+
+3. Determine Fray die from `/appendices/appendix_fray_dice_reference.md`
+4. Roll Fray damage
+5. Apply damage directly to HP (`player.resources.hp_current`)
+6. If HP ≤ 0, trigger **Failure Resolution Procedure**
+7. Log state changes
+
+---
+
+## 4. EPIC ARCHETYPES PROCEDURE
+
+### Trigger
+Player reaches Level ≥ 21
+
+### Steps
+1. Verify `GAME_STATE.appendices.epic_levels = true`
+2. Replace standard subclass features with Epic Archetype features
+3. Apply features at levels 22, 25, 28 as defined in `/appendices/appendix_epic_archetypes.md`
+4. Track usage and limitations in `player.epic.features_used`
+5. Log all state changes
+
+---
+
+## 5. EIDOLON FRAMEWORK PROCEDURE
+
+### Trigger
+`GAME_STATE.appendices.eidolon_framework = true`
+
+### Steps
+1. Prevent acquisition of Stibbles companions
+2. Apply Eidolon evolution triggers:
+
+   - Life Stage progression (Seed Core → Emergent → Ascended → Exalted → Mythic Apex)
+   - Aspect Mutations and Behavioral Axis applications
+   - Mode Changes, if triggered
+   - Resonance level checks
+
+3. Apply Mode overlays and temporary effects
+4. Track all changes in `GAME_STATE.companions[]`
+5. Log state changes
+
+---
+
+## 6. ORACLE PROCEDURE (MYTHIC GME)
+
+### Trigger
+No rule/table resolves an outcome
+
+### Steps
+1. Verify `GAME_STATE.appendices.mythic_gme = true`
+2. Roll Mythic GME check
+3. Record question, roll, result, likelihood, and timestamp
+4. Apply only Fate Check outcome (`yes | no | exceptional yes | exceptional no`)
+5. Cannot modify Writs, Fray, or Companion state
+6. Log result
+
+---
+
+## 7. GENERAL APPENDIX PROCEDURE RULES
+
+1. Skip inactive appendices entirely
+2. Do not modify state fields of inactive appendices
+3. All effects must write to `logs.state_changes`
+4. Execution halts if a required state field is missing
+5. Appendices cannot override Campaign Bible rules
+6. All randomization must be explicit and logged
+
+# ==================

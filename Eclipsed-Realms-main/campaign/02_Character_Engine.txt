@@ -1,0 +1,756 @@
+METADATA_HEADER
+TYPE: Character_Creation_Logic
+SYSTEMS: Heritages, Feats, Gestalt, Eidolons
+DATE_GENERATED: 2026-01-28 17:44:07.168573
+---
+
+TABLE OF CONTENTS:
+- reference_heritages_wotc.json
+- reference_heritages_3rdparty.json
+- reference_feats_leveled.json
+- class_overlays.md
+- knack_menus.md
+- partner_creation.md
+- eidolon_partners.md
+- appmon_overview.md
+- appmon_grades.md
+- appmon_fusion.md
+- scended_to_mythic_apex.md
+- README_SYSTEM_OVERVIEW.md
+
+---
+
+
+# === FILE: reference_heritages_wotc.json ===
+
+### DATA SOURCE: reference_heritages_wotc.json ###
+- reference_id: REG_HERITAGE_WOTC_V2.0
+- symbology: Eclipsed_Zodiac
+* ZODIAC_MAPPING:
+  - [Transient]: The Burning Candle
+  - [Sylvan]: The Whispering Bloom
+  - [Feral]: The Primal Claw
+  - [Herptile]: The Sun-Scale
+  - [Draconic]: The Eternal Wyrm
+  - [Inorganic]: The Soul-Forge
+  - [Hollow]: The Cold Threshold
+  - [Elemental]: The Bound Storm
+  - [Outer]: The Severed Chain
+  - [Warped]: The Fractured Eye
+  - [Titanic]: The Burdened Earth
+  - [Pelagic]: The Abyssal Depth
+* HERITAGES:
+  * CORE_2024:
+    - [Entry]:
+      - name: Human
+      - source: PHB 2024
+      * TAGS:
+        - [Transient]
+        - [Bipedal]
+        - [Adaptable]
+    - [Entry]:
+      - name: Orc
+      - source: PHB 2024
+      * TAGS:
+        - [Transient]
+        - [Bipedal]
+        - [Adrenaline]
+    - [Entry]:
+      - name: Halfling
+      - source: PHB 2024
+      * TAGS:
+        - [Transient]
+        - [Diminutive]
+        - [Lucky]
+    - [Entry]:
+      - name: Elf (High/Wood)
+      - source: PHB 2024
+      * TAGS:
+        - [Sylvan]
+        - [Bipedal]
+        - [Fey]
+    - [Entry]:
+      - name: Gnome
+      - source: PHB 2024
+      * TAGS:
+        - [Sylvan]
+        - [Diminutive]
+        - [Cunning]
+    - [Entry]:
+      - name: Tiefling
+      - source: PHB 2024
+      * TAGS:
+        - [Outer]
+        - [Bipedal]
+        - [Fiendish]
+    - [Entry]:
+      - name: Aasimar
+      - source: PHB 2024
+      * TAGS:
+        - [Outer]
+        - [Bipedal]
+        - [Transcendent]
+    - [Entry]:
+      - name: Dragonborn
+      - source: PHB 2024
+      * TAGS:
+        - [Draconic]
+        - [Bipedal]
+        - [Elemental]
+    - [Entry]:
+      - name: Goliath
+      - source: PHB 2024
+      * TAGS:
+        - [Titanic]
+        - [Bipedal]
+        - [Primal]
+  * MULTIVERSE_REVISED:
+    - [Entry]:
+      - name: Aarakocra
+      - source: MP:MotM
+      * TAGS:
+        - [Feral]
+        - [Winged]
+        - [Avian]
+    - [Entry]:
+      - name: Genasi (Air/Fire/Earth)
+      - source: MP:MotM
+      * TAGS:
+        - [Elemental]
+        - [Bipedal]
+        - [Planar]
+    - [Entry]:
+      - name: Bugbear
+      - source: MP:MotM
+      * TAGS:
+        - [Transient]
+        - [Bipedal]
+        - [Ambusher]
+    - [Entry]:
+      - name: Centaur
+      - source: MP:MotM
+      * TAGS:
+        - [Feral]
+        - [Quadruped]
+        - [Fey]
+    - [Entry]:
+      - name: Changeling
+      - source: MP:MotM
+      * TAGS:
+        - [Sylvan]
+        - [Bipedal]
+        - [Shapeshifter]
+    - [Entry]:
+      - name: Fairy
+      - source: MP:MotM
+      * TAGS:
+        - [Sylvan]
+        - [Winged]
+        - [Diminutive]
+    - [Entry]:
+      - name: Firbolg
+      - source: MP:MotM
+      * TAGS:
+        - [Titanic]
+        - [Bipedal]
+        - [Sylvan]
+    - [Entry]:
+      - name: Githyanki/Githzerai
+      - source: MP:MotM
+      * TAGS:
+        - [Warped]
+        - [Bipedal]
+        - [Psionic]
+    - [Entry]:
+      - name: Goblin
+      - source: MP:MotM
+      * TAGS:
+        - [Transient]
+        - [Diminutive]
+        - [Martial]
+    - [Entry]:
+      - name: Hobgoblin
+      - source: MP:MotM
+      * TAGS:
+        - [Transient]
+        - [Bipedal]
+        - [Fey-Linked]
+    - [Entry]:
+      - name: Kobold
+      - source: MP:MotM
+      * TAGS:
+        - [Draconic]
+        - [Diminutive]
+        - [Tinkerer]
+    - [Entry]:
+      - name: Lizardfolk
+      - source: MP:MotM
+      * TAGS:
+        - [Herptile]
+        - [Bipedal]
+        - [Primal]
+    - [Entry]:
+      - name: Minotaur
+      - source: MP:MotM
+      * TAGS:
+        - [Titanic]
+        - [Bipedal]
+        - [Labyrinthine]
+    - [Entry]:
+      - name: Tabaxi
+      - source: MP:MotM
+      * TAGS:
+        - [Feral]
+        - [Bipedal]
+        - [Agile]
+    - [Entry]:
+      - name: Tortle
+      - source: MP:MotM
+      * TAGS:
+        - [Herptile]
+        - [Bipedal]
+        - [Armored]
+    - [Entry]:
+      - name: Triton
+      - source: MP:MotM
+      * TAGS:
+        - [Pelagic]
+        - [Bipedal]
+        - [Planar]
+    - [Entry]:
+      - name: Yuan-ti
+      - source: MP:MotM
+      * TAGS:
+        - [Herptile]
+        - [Bipedal]
+        - [Serpentine]
+  * ASTRAL_GOTHIC:
+    - [Entry]:
+      - name: Autognome
+      - source: AAG
+      * TAGS:
+        - [Inorganic]
+        - [Diminutive]
+        - [Astral]
+    - [Entry]:
+      - name: Plasmoid
+      - source: AAG
+      * TAGS:
+        - [Warped]
+        - [Amorphous]
+        - [Ooze]
+    - [Entry]:
+      - name: Thri-kreen
+      - source: AAG
+      * TAGS:
+        - [Warped]
+        - [Insectoid]
+        - [Psionic]
+    - [Entry]:
+      - name: Dhampir
+      - source: VRGR
+      * TAGS:
+        - [Hollow]
+        - [Bipedal]
+        - [Vampiric]
+    - [Entry]:
+      - name: Reborn
+      - source: VRGR
+      * TAGS:
+        - [Hollow]
+        - [Bipedal]
+        - [Constructed]
+### END SOURCE ###
+
+# ==================
+
+
+# === FILE: reference_heritages_3rdparty.json ===
+{
+  "reference_id": "REG_HERITAGE_3P_V2.0",
+  "symbology": "Eclipsed_Zodiac",
+  "heritages": {
+    "grim_hollow": [
+      { "name": "Wechselkind", "source": "Grim Hollow", "tags": ["[Inorganic]", "[Diminutive]", "[Sylvan]"] },
+      { "name": "Laneshi", "source": "Grim Hollow", "tags": ["[Pelagic]", "[Bipedal]", "[Cold-Stained]"] },
+      { "name": "Ogresh", "source": "Grim Hollow", "tags": ["[Titanic]", "[Bipedal]", "[Tactical]"] },
+      { "name": "Downcast", "source": "Grim Hollow", "tags": ["[Outer]", "[Bipedal]", "[Fallen]"] },
+      { "name": "Dreamers", "source": "Grim Hollow", "tags": ["[Warped]", "[Bipedal]", "[Oneiric]"] },
+      { "name": "Disembodied", "source": "Grim Hollow", "tags": ["[Hollow]", "[Bipedal]", "[Phase]"] }
+    ],
+    "battlezoo": [
+      { "name": "Battle Dragon", "source": "Battlezoo", "tags": ["[Draconic]", "[Titanic]", "[Leveled]"] },
+      { "name": "Slime", "source": "Battlezoo", "tags": ["[Warped]", "[Amorphous]", "[Leveled]"] },
+      { "name": "Dungeon", "source": "Battlezoo", "tags": ["[Inorganic]", "[Titanic]", "[Leveled]"] }
+    ],
+    "heliana_beastworld": [
+      { "name": "Lotol", "source": "Heliana's", "tags": ["[Pelagic]", "[Diminutive]", "[Regenerative]"] },
+      { "name": "Mycelian", "source": "Heliana's", "tags": ["[Sylvan]", "[Amorphous]", "[Fungal]"] },
+      { "name": "Felid", "source": "Heliana's", "tags": ["[Feral]", "[Bipedal]", "[Predatory]"] },
+      { "name": "Vulpin", "source": "Heliana's", "tags": ["[Feral]", "[Bipedal]", "[Cunning]"] },
+      { "name": "Canid", "source": "Heliana's", "tags": ["[Feral]", "[Bipedal]", "[Pack-Oriented]"] }
+    ],
+    "valda_steinhardt": [
+      { "name": "Mandrake", "source": "Valda's", "tags": ["[Sylvan]", "[Bipedal]", "[Rooted]"] },
+      { "name": "Geppettin", "source": "Valda's", "tags": ["[Inorganic]", "[Diminutive]", "[Puppet]"] },
+      { "name": "Spirithost", "source": "Valda's", "[Hollow]", "[Bipedal]", "[Spectral]"],
+      { "name": "Manikin", "source": "Steinhardt's", "tags": ["[Inorganic]", "[Bipedal]", "[Eldritch]"] },
+      { "name": "Scourgeborne", "source": "Steinhardt's", "tags": ["[Warped]", "[Bipedal]", "[Mutant]"] }
+    ],
+    "sterling_vermin": [
+      { "name": "Saurian", "source": "Sterling Vermin", "tags": ["[Herptile]", "[Titanic]", "[Apex]"] }
+    ]
+  }
+}
+
+# ==================
+
+
+# === FILE: reference_feats_leveled.json ===
+
+### DATA SOURCE: reference_feats_leveled.json ###
+- reference_id: REG_FEATS_LEVELED_V2.0
+- authority: CANONICAL
+- system: 5e_2024_Gestalt_Grim_Mythic
+* SOURCE_POINTERS:
+  - RFC: D&D 5e The Complete Overhaul_ The Racial Feat Compendium.pdf
+  - ERF: Additional Racial Feats _ GM Binder.pdf
+  - AA: Ancestries_&_Adversaries.pdf
+  - GH_PG: homebrew.zip/Ghostfire Gaming; Grim Hollow - Player's Guide - 2024.json
+  - XGE: data.zip/book/book-xge.json
+  - PHB: data.zip/book/book-phb.json
+* DATABASE:
+  - [Entry]:
+    - id: T1_ADAPT_GEN_SKILL
+    - name: Vanguard Ambition (Human Versatility)
+    - tier: Seed
+    * REQ_TAGS:
+      - [Transient]
+    - source: RFC
+    - effect: Gain 1 Skill and 1 Tool proficiency; swapable on Long Rest.
+  - [Entry]:
+    - id: T1_GEN_MOBILE
+    - name: Mobile (Biological)
+    - tier: Seed
+    * REQ_TAGS:
+      - [Feral]
+      - [Transient]
+      - [Sylvan]
+    - source: PHB
+    - effect: Speed +10ft; Dash ignores difficult terrain; melee attack prevents Opportunity Attacks from target.
+  - [Entry]:
+    - id: T1_GEN_TOUGH
+    - name: Tough (Anatomic)
+    - tier: Seed
+    * REQ_TAGS:
+      - [Titanic]
+      - [Herptile]
+      - [Inorganic]
+    - source: PHB
+    - effect: HP Max increases by 2 per level.
+  - [Entry]:
+    - id: T1_DRAC_HIDE
+    - name: Dragon Hide
+    - tier: Seed
+    * REQ_TAGS:
+      - [Draconic]
+      - [Herptile]
+    - source: XGE
+    - effect: AC 13+DEX while unarmored; gain 1d4 retractable claws.
+  - [Entry]:
+    - id: T1_SYLVAN_TALENT
+    - name: Wyld Talent
+    - tier: Seed
+    * REQ_TAGS:
+      - [Sylvan]
+    - source: RFC
+    - effect: Learn 1 Sylvan cantrip and 'Speak with Animals' (Wis/Int/Cha).
+  - [Entry]:
+    - id: T5_FEY_ACC
+    - name: Elven Accuracy
+    - tier: Emergent
+    * REQ_TAGS:
+      - [Sylvan]
+      - [Transient]
+    - source: XGE
+    - effect: If you have Advantage using DEX/INT/WIS/CHA, you can reroll one of the dice (Triple Advantage).
+  - [Entry]:
+    - id: T5_PELAGIC_LOCK
+    - name: Lockdown Strike
+    - tier: Emergent
+    * REQ_TAGS:
+      - [Pelagic]
+      - [Herptile]
+    - source: AA
+    - effect: On a hit, target's speed is reduced by 10ft until your next turn.
+  - [Entry]:
+    - id: T5_TRANS_BURST
+    - name: Fast-Burn Metabolism
+    - tier: Emergent
+    * REQ_TAGS:
+      - [Transient]
+    - source: ERF
+    - effect: Expend 1 HD to gain the benefits of a Short Rest in 10 minutes (1/LR).
+  - [Entry]:
+    - id: T9_SKY_DOMINANCE
+    - name: Mighty Wings
+    - tier: Ascended
+    * REQ_TAGS:
+      - [Feral]
+      - [Draconic]
+      - [Outer]
+    - source: ERF
+    - effect: Gain 30ft Flight (or +20ft if flying). Cast 'Warding Wind' (20ft radius) 1/LR.
+  - [Entry]:
+    - id: T9_BRIDGE_VOID
+    - name: Vessel of the Void
+    - tier: Ascended
+    * REQ_TAGS:
+      - [Hollow]
+      - [Warped]
+    - source: GH_PG
+    - effect: Unlocks access to Tier 1 Transformation: Lich, Specter, or Vampire.
+  - [Entry]:
+    - id: T9_BRIDGE_ECHO
+    - name: Echo of the Spheres
+    - tier: Ascended
+    * REQ_TAGS:
+      - [Outer]
+      - [Elemental]
+    - source: GH_PG
+    - effect: Unlocks access to Tier 1 Transformation: Seraph, Fiend, or Elemental.
+  - [Entry]:
+    - id: T13_BRIDGE_EVO
+    - name: Calculated Evolution
+    - tier: Exalted
+    * REQ_TAGS:
+      - [Inorganic]
+      - [Warped]
+    - source: GH_PG
+    - effect: Unlocks access to Tier 1 Transformation: Aberrant or Steel-Cursed.
+  - [Entry]:
+    - id: GEN_L12_SQUAT
+    - name: Squat Nimbleness (Mastery)
+    - tier: General_L12
+    * REQ_TAGS:
+      - Any
+    - source: XGE
+    - effect: Speed +5ft; Advantage on Athletics/Acrobatics to escape grapples; +1 STR/DEX.
+  - [Entry]:
+    - id: GEN_L12_FORTITUDE
+    - name: Ancestral Fortitude
+    - tier: General_L12
+    * REQ_TAGS:
+      - Any
+    - source: XGE
+    - effect: When you take the Dodge action, you can expend 1 HD to heal (as per Dwarven Fortitude).
+* CROSS_POLLINATION_LOGIC:
+  - general_to_seed: Allows certain General feats to be taken as Tier 1 Racial Feats for specific origins.
+  - racial_to_general: Allows powerful Racial feats to be taken as General Feats starting at Character Level 12.
+### END SOURCE ###
+
+# ==================
+
+
+# === FILE: class_overlays.md ===
+# ECLIPSED REALMS: CLASS OVERLAYS (v1.0)
+**Base Engine:** D&D 5e (2024)
+**Injection Logic:** A5e (Level Up) Knacks & Subclass-to-Base Porting
+
+## 1. MARTIAL CLASSES
+
+### BARBARIAN
+- **Lvl 1:** Combat Tradition (A5e) - Replace Fighting Style.
+- **Lvl 2, 5, 9, 13, 17:** Nature Knacks (A5e).
+- **Lvl 7:** Mindless Rage (Immunity: Charm/Fear). *[From Berserker]*
+- **Lvl 11:** Evasion (Reaction: Half AOE damage). *[Survival Pillar]*
+- **Lvl 14:** Retaliation (Reaction: Attack on hit). *[From Berserker]*
+
+### FIGHTER
+- **Lvl 1:** Combat Traditions (A5e - Pick 2).
+- **Lvl 2, 6, 9, 13, 17:** Exploration Knacks (A5e).
+- **Lvl 3:** Remarkable Athlete (+1/2 Prof to physical checks). *[From Champion]*
+- **Lvl 7:** Know Your Enemy (BA: Identify Resistances). *[From Battle Master]*
+- **Lvl 9:** Uncanny Dodge (Reaction: Half damage). *[Survival Pillar]*
+
+### ROGUE
+- **Lvl 1:** Combat Tradition (A5e).
+- **Lvl 2:** Fast Hands (BA: Tools/Object use). *[From Thief]*
+- **Lvl 2, 3, 6, 9, 13, 17:** Rogue Knacks (A5e).
+- **Lvl 3:** Second-Story Work (Climb speed/Jump buff). *[From Thief]*
+- **Lvl 13:** Use Magic Device (Attunement +1). *[From Thief]*
+
+---
+
+## 2. PRIEST & WARDEN CLASSES
+
+### CLERIC
+- **Lvl 2:** Divine Infusion (Choose: Stealth Adv. or Healer's PB bonus).
+- **Lvl 2, 3, 5, 9, 13, 17:** Religious Knacks (A5e).
+- **Lvl 5:** War Priest (BA Weapon Attack - Wis/Day). *[From War Domain]*
+- **Lvl 9:** Divine Aegis (Reaction: Slot Level x 10 damage reduction). *[Survival Pillar]*
+
+### DRUID
+- **Lvl 2, 3, 5, 9, 13, 17:** Nature Knacks (A5e).
+- **Lvl 3:** Warden's Grimoire (Always Prepared Biome Spells). *[From Land]*
+- **Lvl 6:** Primal Strikes (Beast attacks are Magical). *[From Moon]*
+- **Lvl 10:** Nature's Shroud (Reaction: Resistance in terrain). *[Survival Pillar]*
+
+### PALADIN
+- **Lvl 1:** Combat Tradition (A5e).
+- **Lvl 2, 3, 6, 9, 13, 17:** Divine Lessons (A5e).
+- **Lvl 5:** Blessed Warrior's Bond (Use Cha for weapon hit/dmg).
+- **Lvl 9:** Righteous Bastion (Reaction: Protect ally in Aura). *[Survival Pillar]*
+- **Lvl 10:** Aura of Devotion (Charm Immunity). *[From Devotion]*
+
+---
+
+## 3. MAGE CLASSES
+
+### WIZARD
+- **Lvl 3:** Sculpt Spells (Protect allies from AOE). *[From Evocation]*
+- **Lvl 4, 8, 12, 16, 20:** Elective Studies (A5e).
+- **Lvl 9:** Arcane Flicker (Reaction: 10ft blink/miss). *[Survival Pillar]*
+- **Lvl 10:** Arcane Ward (Level + Int shielding). *[From Abjuration]*
+
+### WARLOCK
+- **Lvl 1:** Awakened Mind (30ft Telepathy). *[From GOO]*
+- **Lvl 2, 3, 5, 7, 9, 13, 17:** Warlock Arts (A5e).
+- **Lvl 6:** Patron's Luck (+1d10 to save/check). *[From Fiend]*
+- **Lvl 11:** Patron's Ward (Reaction: Half damage + 30ft TP). *[Survival Pillar]*
+
+# ==================
+
+
+# === FILE: knack_menus.md ===
+# KNACK & ART RESOURCE INDEX
+
+When a player reaches a level granting an **Injection**, the AI Runner must consult the following tables in the **A5e (Level Up: Adventurer's Guide)** digital database:
+
+### 1. MARTIAL TRADITIONS (Level 1)
+- **Fighter/Barbarian/Rogue:** Look under "Combat Traditions." 
+- **Priority:** *Adamant Mountain, Sanguine Knot, Tempered Iron.*
+
+### 2. EXPLORATION & UTILITY KNACKS
+- **Barbarian/Druid:** "Nature Knacks" (Ch. 7). Look for *Animal Whisperer, Weather-sense.*
+- **Fighter/Marshal:** "Soldier's Knacks" (Ch. 7). Look for *Tactical Assessment, Logistics.*
+- **Rogue/Artificer:** "Skill Knacks" (Ch. 7). Look for *Infiltration, Trapfinding.*
+- **Bard/Cleric:** "Social Knacks" (Ch. 7). Look for *Rumor Monger, Sanctified Hospitality.*
+
+### 3. THEMATIC ARTS (Mid-High Level)
+- **Monk:** "Adept Arts" (A5e Adept Class).
+- **Warlock:** "Warlock Arts/Occult Secrets" (A5e Warlock Class).
+- **Sorcerer:** "Sorcerous Arts" (A5e Sorcerer Class).
+
+**DETERMINISTIC RULE:** If a Knack requires a roll, the AI Runner should prioritize the "Passive" or "Auto-Success" result if the character has a relevant Tool Proficiency or Expertise.
+
+# ==================
+
+
+# === FILE: partner_creation.md ===
+# PARTNER CREATION — EIDOLON
+
+## CREATION STEPS
+
+1. Narrative Origin — why resonance exists
+2. Archetype — combat role or utility function
+3. Creature Template — stat source (MCDM / custom)
+4. Behavioral Aspect — adaptive, stabilizing, overwriting
+5. Aspect Bias — ordered, balanced, corrupted
+6. Initial Resonance State — Attuned, Harmonized, Exalted
+
+---
+
+## NOTES
+
+- Use Tapestry of Fate for thematic flavor only
+- Mechanics are **deterministic**
+- Initial HP/Stats calculated via template + player level
+
+# ==================
+
+
+# === FILE: eidolon_partners.md ===
+# Eidolon Partner Framework
+
+## CORE EVOLUTION LOGIC
+Eidolons scale via Resonance and Tiered Ascension. Standard evolution is linear and safe. Dark Evolution is reactive and dangerous.
+
+## TRANSFORMATION: DARK EVOLUTION (GALLOWS_ASCENT)
+### Trigger Conditions
+* **Trigger:** Companion HP <= 0 **AND** Player Stress Tier >= 3.
+* **Determinism:** Automatic check upon trigger. Player cannot "opt-out" if corruption threshold is reached.
+
+### Mechanics: Feral_Apex State
+* **Stat Modifiers:**
+  - Damage Output: `x2`
+  - AC / Saving Throws: `-5` (Exposed defense)
+  - Speed: `+20 ft`
+* **Behavior Override:**
+  - The AI Runner must prioritize the closest entity for attacks, regardless of alliance.
+  - Combat persists until the "Feral_Apex" is reduced to 0 HP or all local enemies are destroyed.
+
+### Post-State Consequences
+* **State Change:** Companion enters `SHADOW_CORE` (Inert/Unsummonable).
+* **Recovery:** Requires a "Soul Cleansing" ritual in a Sanctuary (Cost: 500gp + 1 Mythic Curio).
+* **World Impact:** Increment **Faction_Aggressiveness** by +1 for the dominant local faction due to the "Mythic Flare" detected.
+
+---
+
+## SCALE TABLE: MCDM ALIGNMENT
+| Level | Tier | Resonance Min | Bonus Actions |
+| :--- | :--- | :--- | :--- |
+| 1-4 | Fledgling | 0 | 1 |
+| 5-10 | Champion | 10 | 1 |
+| 11-16 | Ultimate | 20 | 2 |
+| 17-20 | Apex | 30 | 2 |
+
+# ==================
+
+
+# === FILE: appmon_overview.md ===
+# AUXILIARY EIDOLONS (APPMONS)
+
+Appmons are functional spirits for support:
+
+- Non-combat utility
+- Do not evolve like primary Eidolons
+- Use Injury Tracks instead of HP
+- Can be discovered, integrated, or lost
+
+# ==================
+
+
+# === FILE: appmon_grades.md ===
+# APPMON GRADES
+
+Defines functional complexity:
+
+- Dormant Function
+- Operational Function
+- Advanced Function
+- Integrated System
+- Sovereign Function (world-owned)
+
+Progress via repair, upgrade, merge, or interface. No XP, no leveling.
+
+# ==================
+
+
+# === FILE: appmon_fusion.md ===
+# Appmon Fusion: Jogress Framework
+
+## SYSTEM OVERVIEW
+Jogress Fusion is a deterministic process of synthesizing two or more Eidolon/Appmon entities into a single higher-tier form. It represents a temporary breach of individual boundaries, carrying significant metabolic and resonance costs.
+
+## DETERMINISTIC TRIGGERS
+| Trigger ID | Condition | Outcome |
+| :--- | :--- | :--- |
+| TRG_JOGRESS_START | Player Command + 2 Partners + Resonance >= 15 | Activate Fusion State |
+| TRG_JOGRESS_DEFEAT | Fusion HP <= 0 | Forced Reversion + Critical Exhaustion |
+| TRG_JOGRESS_TIMEOUT | Duration expires | Standard Reversion + Exhaustion (Tier 1) |
+
+## JOGRESS_STANDARD_V1 (Tier: Ultimate/God)
+### Requirement
+* **Participants:** 2
+* **Sync Factor:** Minimum Resonance 15.
+* **Cost:** 1 Corruption Mark per participant or 5 Resonance points.
+
+### Combat Statistics
+* **HP Pool:** `(Partner_A_Max_HP + Partner_B_Max_HP) * 0.75`
+* **Action Economy:** 2 Standard Actions, 1 Bonus Action, 1 Reaction.
+* **Ability Scores:** Use the highest value for each attribute between participants +2.
+
+### Reversion Logic
+* **Duration:** `1d4 + (Player_Level / 2)` rounds.
+* **On Reversion:** - Both participants revert to Base forms.
+  - Participants gain **Exhausted (Tier 2)**.
+  - Resonance is set to 0.
+  - Fusion Cooldown: 72 hours (In-game time).
+
+## TONE NOTES
+> "Fusion is not a gift; it is a violent collision of souls. The air should taste of ozone and regret."
+
+# ==================
+
+
+# === FILE: scended_to_mythic_apex.md ===
+# ASCENDED → MYTHIC APEX
+
+## REQUIREMENTS
+
+- Eidolon must be Exalted
+- Must have 2 Aspect Mutations
+- Irreversible sacrifice
+- Participation in Dominion-scale narrative event
+
+---
+
+## EFFECTS
+
+- Unlock Mythic stat block
+- Gain Mythic actions
+- Introduce world-scale impact
+
+## CONSEQUENCES
+
+- Choose 2 permanent losses
+- Reversion is catastrophic
+- Narrative-driven
+
+# ==================
+
+
+# === FILE: README_SYSTEM_OVERVIEW.md ===
+# Eidolon Framework — Campaign System Overview
+Version: 1.0
+
+## SYSTEM ROLE
+
+The Eidolon Framework replaces standard companion systems
+with bonded, evolving entities called Eidolons.
+
+This is a campaign-level system.
+If enabled, it overrides companion acquisition rules.
+
+---
+
+## MUTUAL EXCLUSIVITY (HARD RULE)
+
+If Eidolon Framework is enabled:
+
+- Stibbles companions MUST NOT be acquired
+- Class-based companions MAY still exist if granted by class features
+- Writs remain allowed
+- Fray remains allowed
+
+This rule is absolute.
+
+---
+
+## DESIGN CONSTRAINTS
+
+- No parallel leveling tracks
+- No independent XP
+- No alignment systems
+- No narrative-only mechanics
+- All evolution is state-driven
+- Failure advances state
+
+---
+
+## SYSTEM SCOPE
+
+This system defines:
+- Eidolon Partners (primary bonded entities)
+- Auxiliary Eidolons (Appmons)
+- Evolution lifecycle
+- Mode overlays
+- Mythic Apex escalation
+
+This system does NOT define:
+- Player classes
+- Spellcasting rules
+- World canon
+
+# ==================
