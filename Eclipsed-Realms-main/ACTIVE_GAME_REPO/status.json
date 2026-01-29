@@ -1,0 +1,22 @@
+{
+  "system_state": {
+    "version": "1.3-ARCHITECT",
+    "deployment_phase": "DEVELOPMENT",
+    "last_sync": "2026-01-28",
+    "operational_status": "INACTIVE"
+  },
+  "campaign_integrity": {
+    "lore_status": "PENDING_FINALIZATION",
+    "mechanics_status": "CORE_MAPPED_EXTENSIONS_IN_DEV",
+    "data_integration": "ONGOING_DATA_ZIPS_ANALYZED"
+  },
+  "runner_logic": {
+    "active_session": false,
+    "current_run_id": null,
+    "initialization_required": true,
+    "prevention_flag": "DO_NOT_START_RUN_WITHOUT_USER_INIT"
+  },
+  "architect_notes": {
+    "directive": "The Runner AI must halt at this file. Lore and mechanics are currently being flattened for NotebookLM. Do not improvise world-state or character progress until this flag is changed to ACTIVE."
+  }
+}

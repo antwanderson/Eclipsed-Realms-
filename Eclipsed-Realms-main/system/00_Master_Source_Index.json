@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "description": "Master Source Priority for Campaign Building Phase.",
+    "version": "5.0"
+  },
+  "priority_logic": {
+    "1": "WotC 2024 Revision (XPHB/XDMG/XMM)",
+    "2": "Modern 3rd-Party Systems (Kibbles, MCDM, Steinhardt, Grim Hollow)",
+    "3": "Latest UA (2025/2026 Playtests)",
+    "4": "Legacy WotC (2014 Core Books)"
+  },
+  "abbreviation_registry": [
+    {"abbr": "XPHB", "full": "Player's Handbook 2024", "status": "PRIMARY"},
+    {"abbr": "XDMG", "full": "Dungeon Master's Guide 2024", "status": "PRIMARY"},
+    {"abbr": "Kip", "full": "Kibbles' Compendium", "status": "PRIMARY_SYSTEM"},
+    {"abbr": "GH_PG", "full": "Grim Hollow Player's Guide", "status": "PRIMARY_SYSTEM"},
+    {"abbr": "DoDk", "full": "Dungeons of Drakkenheim", "status": "PRIMARY_SYSTEM"},
+    {"abbr": "MP", "full": "Martial Prowess", "status": "PRIMARY_SYSTEM"},
+    {"abbr": "UA2025_Apoc", "full": "UA 2025 Apocalyptic Subclasses", "status": "LATEST_PLAYTEST"},
+    {"abbr": "PHB", "full": "Player's Handbook 2014", "status": "LEGACY_ARCHIVE"},
+    {"abbr": "MM", "full": "Monster Manual 2014", "status": "LEGACY_ARCHIVE"}
+  ]
+}

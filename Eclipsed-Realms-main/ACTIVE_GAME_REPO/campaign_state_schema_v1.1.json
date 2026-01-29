@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "schema_version": "1.1",
+    "campaign_version": "1.2",
+    "created_at": "ISO-8601 timestamp",
+    "last_updated": "ISO-8601 timestamp"
+  },
+
+  "time": {
+    "absolute_day": 0,
+    "watch": "dawn | day | dusk | night",
+    "active_procedures": []
+  },
+
+  "location": {
+    "mode": "hex | dungeon | settlement | abstract",
+    "hex_id": "string | null",
+    "node_id": "string | null",
+    "sub_location": "string | null"
+  },
+
+  "player": {
+    "identity": {
+      "name": "string",
+      "level": 1,
+      "epic_tier": false
+    },
+    "classes": {
+      "primary": "string",
+      "secondary": "string"
+    },
+    "resources": {
+      "hp_current": 0,
+      "hp_max": 0,
+      "hit_dice": [],
+      "supply": 0,
+      "gold": 0
+    },
+    "effort": {
+      "current": 0,
+      "max": 0,
+      "committed": []
+    },
+    "conditions": [],
+    "exhaustion_level": 0,
+    "corruption": {
+      "score": 0,
+      "tier": 0,
+      "active_traits": []
+    },
+    "epic": {
+      "archetype": "string | null",
+      "features_used": []
+    }
+  },
+
+  "companions": [],
+
+  "factions": {},
+
+  "world": {
+    "known_hexes": [],
+    "unstable_hexes": [],
+    "global_threat_level": 0
+  },
+
+  "threats": [],
+
+  "procedures": {
+    "active": [],
+    "queued": []
+  },
+
+  "appendices": {
+    "writs": false,
+    "fray": false,
+    "epic_levels": false,
+    "transformations": false,
+    "dominion": false,
+    "mythic_gme": false,
+    "eidolon_framework": false
+  },
+
+  "oracle_log": [],
+
+  "logs": {
+    "rolls": [],
+    "state_changes": []
+  }
+}
