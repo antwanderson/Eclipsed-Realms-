@@ -1,0 +1,53 @@
+{
+  "registry_name": "Eclipsed Realms Master Source Registry",
+  "version": "1.0",
+  "pattern": "Full Name | Abbreviation | Specific File | Merged Master",
+  "sources": [
+    {
+      "category": "Core & Official (2024 Revisions)",
+      "entries": [
+        { "name": "Player's Handbook (2024)", "abbr": "XPHB", "file": "book-xphb.json", "vault": "merged_master_bookNtoX.json" },
+        { "name": "Dungeon Master's Guide (2024)", "abbr": "XDMG", "file": "book-xdmg.json", "vault": "merged_master_bookNtoX.json" },
+        { "name": "Monster Manual (2024)", "abbr": "XMM", "file": "book-xmm.json", "vault": "merged_master_bookNtoX.json" },
+        { "name": "Tasha's Cauldron of Everything", "abbr": "TCE", "file": "book-tce.json", "vault": "merged_master_bookNtoX.json" },
+        { "name": "Xanathar's Guide to Everything", "abbr": "XGE", "file": "book-xge.json", "vault": "merged_master_bookNtoX.json" }
+      ]
+    },
+    {
+      "category": "Core & Official (Legacy/Settings)",
+      "entries": [
+        { "name": "Player's Handbook (2014)", "abbr": "PHB", "file": "book-phb.json", "vault": "merged_master_bookAtoM.json" },
+        { "name": "Monster Manual (2014)", "abbr": "MM", "file": "book-mm.json", "vault": "merged_master_bookAtoM.json" },
+        { "name": "Dungeon Master's Guide (2014)", "abbr": "DMG", "file": "book-dmg.json", "vault": "merged_master_bookAtoM.json" },
+        { "name": "Eberron: Rising from the Last War", "abbr": "ERLW", "file": "book-erlw.json", "vault": "merged_master_bookAtoM.json" },
+        { "name": "Guildmasters' Guide to Ravnica", "abbr": "GGR", "file": "book-ggr.json", "vault": "merged_master_bookAtoM.json" }
+      ]
+    },
+    {
+      "category": "Homebrew & 3rd Party (A-G)",
+      "entries": [
+        { "name": "Grim Hollow: Player's Guide", "abbr": "GH_PG", "file": "Grim Hollow - Player's Guide - 2024.json", "vault": "merged_master_AtoG.json" },
+        { "name": "Dungeons of Drakkenheim", "abbr": "DOD", "file": "Dungeons of Drakkenheim.json", "vault": "merged_master_AtoG.json" },
+        { "name": "Sebastian Crowe's Guide to Drakkenheim", "abbr": "SCGTD", "file": "Sebastian Crowe's Guide to Drakkenheim.json", "vault": "merged_master_AtoG.json" },
+        { "name": "Stibbles Codex of Companions", "abbr": "SCOC", "file": "Stibbles Codex of Companions.json", "vault": "merged_master_AtoG.json" }
+      ]
+    },
+    {
+      "category": "Homebrew & 3rd Party (H-X)",
+      "entries": [
+        { "name": "Kibbles' Crafting Guide", "abbr": "Kip", "file": "Kibbles' Crafting Guide.json", "vault": "merged_master_HtoMC.json" },
+        { "name": "Flee, Mortals!", "abbr": "FM", "file": "Flee, Mortals!.json", "vault": "merged_master_HtoMC.json" },
+        { "name": "Valda's Spire of Secrets", "abbr": "VSoS", "file": "Valda's Spire of Secrets.json", "vault": "merged_master_HtoMC.json" },
+        { "name": "Steinhardt's Guide to the Eldritch Hunt", "abbr": "SGEH", "file": "Steinhardt's Guide to the Eldritch Hunt.json", "vault": "merged_master_MitoX.json" }
+      ]
+    },
+    {
+      "category": "Unearthed Arcana (UA)",
+      "entries": [
+        { "name": "UA: 2021 Draconic Options", "abbr": "UA21DO", "file": "Unearthed Arcana: 2021 Draconic Options.json", "vault": "merged_UA_master.json" },
+        { "name": "UA 2025: Psion Update", "abbr": "UA25PU", "file": "Unearthed Arcana 2025 - Psion Update.json", "vault": "merged_UA_master.json" },
+        { "name": "UA: Gothic Heroes", "abbr": "UAGH", "file": "Unearthed Arcana: Gothic Heroes.json", "vault": "merged_UA_master.json" }
+      ]
+    }
+  ]
+}
