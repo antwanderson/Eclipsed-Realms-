@@ -1,0 +1,27 @@
+{
+  "registry_name": "Eclipsed Realms Homebrew Registry",
+  "version": "1.0",
+  "description": "Mapping of Homebrew Authors, Full Titles, and Abbreviations for the Architect AI.",
+  "sources": [
+    { "author": "KibblesTasty", "name": "Artificer (Revised)", "abbr": "Brew", "merged_vault": "merged_master_HtoMC.json" },
+    { "author": "Rsquared", "name": "Martial Prowess", "abbr": "MP", "merged_vault": "merged_master_HtoMC.json" },
+    { "author": "Ghostfire Gaming", "name": "Grim Hollow - Player Pack", "abbr": "GH_PG", "merged_vault": "merged_master_AtoG.json" },
+    { "author": "Ghostfire Gaming", "name": "Sebastian Crowe's Guide to Drakkenheim", "abbr": "SCGTD", "merged_vault": "merged_master_AtoG.json" },
+    { "author": "Ghostfire Gaming", "name": "Stibbles Codex of Companions", "abbr": "SCOC", "merged_vault": "merged_master_AtoG.json" },
+    { "author": "MonkeyDM", "name": "Steinhardt's Guide to the Eldritch Hunt", "abbr": "SGEH", "merged_vault": "merged_master_MitoX.json" },
+    { "author": "MCDM Productions", "name": "Flee, Mortals!", "abbr": "FM", "merged_vault": "merged_master_HtoMC.json" },
+    { "author": "MCDM Productions", "name": "Arcadia (Issues 1-11)", "abbr": "AR", "merged_vault": "merged_master_HtoMC.json" },
+    { "author": "Mage Hand Press", "name": "Valda's Spire of Secrets", "abbr": "VSoS", "merged_vault": "merged_master_HtoMC.json" },
+    { "author": "Mage Hand Press", "name": "Dark Matter (2014)", "abbr": "DM'14", "merged_vault": "merged_master_HtoMC.json" },
+    { "author": "Badooga", "name": "Libris Mortis", "abbr": "LM", "merged_vault": "merged_master_AtoG.json" },
+    { "author": "Badooga", "name": "Elder Evils", "abbr": "EE", "merged_vault": "merged_master_AtoG.json" },
+    { "author": "Kobold Press", "name": "Deep Magic (All Series)", "abbr": "KP", "merged_vault": "merged_master_HtoMC.json" },
+    { "author": "Genuine Fantasy Press", "name": "Compendium of Forgotten Secrets", "abbr": "COFS", "merged_vault": "merged_master_AtoG.json" },
+    { "author": "Heavyarms", "name": "Complete Armorer's Handbook", "abbr": "CAH", "merged_vault": "merged_master_HtoMC.json" },
+    { "author": "Sterling Vermin", "name": "Ultimate Adventurer's Handbook", "abbr": "UAH", "merged_vault": "merged_master_MitoX.json" },
+    { "author": "Walrock Homebrew", "name": "Fortresses, Temples, & Strongholds", "abbr": "FTS", "merged_vault": "merged_master_MitoX.json" },
+    { "author": "Paizo", "name": "Pathfinder Kingmaker Bestiary (5e)", "abbr": "PKB", "merged_vault": "merged_master_MitoX.json" },
+    { "author": "Various", "name": "Magical Tattoos (V4)", "abbr": "TatV4", "merged_vault": "distill_completo.json" }
+  ],
+  "architect_instruction": "Cross-reference [abbr] against the Vault ZIPs. If a requested class or mechanic uses a listed abbreviation, open the corresponding [merged_vault] file using Python."
+}
