@@ -1,0 +1,71 @@
+{
+  "registry_name": "Eclipsed Realms PDF Library Registry",
+  "version": "1.0",
+  "tier_authority": "TIER B - THE LIBRARY (Logic & Intent)",
+  "categories": [
+    {
+      "category": "PROXIMAL_CORE (A5e & Epic Systems)",
+      "description": "The primary mechanical expansion for the 2024 baseline.",
+      "sources": [
+        { "file": "Adventurer's Guide.pdf", "abbr": "A5e_AG", "role": "Core Character/Exploration" },
+        { "file": "Trials & Treasures.pdf", "abbr": "A5e_TT", "role": "Exploration/Magic Items" },
+        { "file": "Dungeon Delvers Guide.pdf", "abbr": "A5e_DDG", "role": "Dungeon Mechanics" },
+        { "file": "marc-altfuldisch-epic-characters-v22-pr_.pdf", "abbr": "EPIC", "role": "Level 20+ Progression" },
+        { "file": "Additional Racial Feats _ GM Binder.pdf", "abbr": "ARF", "role": "Ancestry Feats" },
+        { "file": "D&D 5e The Complete Overhaul_ The Racial Feat Compendium.pdf", "abbr": "RFC", "role": "Ancestry Overhauls" }
+      ]
+    },
+    {
+      "category": "GME_OPERATIONAL_PROCEDURES (Solo & Sandbox)",
+      "description": "Deterministic engines that run the world without a DM.",
+      "sources": [
+        { "file": "Mythic - Game Master Emulator 2e.pdf", "abbr": "MYTHIC", "role": "Oracle/Scene Logic" },
+        { "file": "FlexTale Solo Adventuring Toolkit.pdf", "abbr": "FTSAT", "role": "Solo 5e Procedures" },
+        { "file": "FlexTale Hexcrawl Toolkit.pdf", "abbr": "FTHEX", "role": "Wilderness Sandbox" },
+        { "file": "Tome of Adventure Design (Revised).pdf", "abbr": "TAD", "role": "Dungeon/Mission Generation" },
+        { "file": "Worlds Without Number (deluxe edition).pdf", "abbr": "WWN", "role": "Sandbox/Tags" },
+        { "file": "Atlas of the Latter Earth.pdf", "abbr": "ALE", "role": "Expanded Tags/Classes" },
+        { "file": "AshesWithoutNumber_Deluxe.pdf", "abbr": "AWN", "role": "Post-Apoc/Tech Procedures" },
+        { "file": "CitiesWithoutNumber_Deluxe.pdf", "abbr": "CWN", "role": "Cyberpunk/Mission Procedures" },
+        { "file": "Godbound_DeluxeVersion.pdf", "abbr": "GB", "role": "Epic Scale Changes" },
+        { "file": "[System Agnostic] FlexAI Combat Tactics Toolkit.pdf", "abbr": "F_AI", "role": "Deterministic Monster AI" }
+      ]
+    },
+    {
+      "category": "EXPANSION_ANOMALY (Battlezoo & Draconic)",
+      "description": "High-complexity species and monster-trainer systems.",
+      "sources": [
+        { "file": "Battlezoo Eldamon v3.0.pdf", "abbr": "ELD", "role": "Eldamon Trainer System" },
+        { "file": "Battlezoo_Ancestries_Dragons_5E_v4.pdf", "abbr": "BZD", "role": "Playable Dragon Logic" },
+        { "file": "Battlezoo Ancestries Fusions 5E v2.pdf", "abbr": "BZF", "role": "Combined PC Logic" },
+        { "file": "Battlezoo Ancestries Angels 5E v3.pdf", "abbr": "BZA", "role": "Angel Ancestry" },
+        { "file": "Battlezoo Ancestries Devils 5E v2.pdf", "abbr": "BZDv", "role": "Devil Ancestry" },
+        { "file": "Battlezoo Ancestries Werecreatures 5E v1.pdf", "abbr": "BZW", "role": "Shifter Logic" },
+        { "file": "Battlezoo Ancestries Arboreals 5E v1.pdf", "abbr": "BZAr", "role": "Plant Ancestry" },
+        { "file": "Battlezoo Ancestries Golemborn 5E v2.pdf", "abbr": "BZG", "role": "Construct Ancestry" },
+        { "file": "Battlezoo Ancestries Dungeons 5E.pdf", "abbr": "BZDn", "role": "Living Dungeon Ancestry" }
+      ]
+    },
+    {
+      "category": "EXPANSION_GOTHIC (Grim & Dark)",
+      "description": "Sources for Horror, Mutation, and Dark Fantasy.",
+      "sources": [
+        { "file": "Grim Hollow Transformed - Campaign Guide.pdf", "abbr": "GH_CG", "role": "Transformations/Corruption" },
+        { "file": "Kisarta 5E - The Lost Codex of Kisarta.pdf", "abbr": "KIS", "role": "Horror Realities" },
+        { "file": "Heliana's Guide to Monster Hunting.pdf", "abbr": "HELI", "role": "Crafting/Hunting Loops" },
+        { "file": "Bloodlines Unbound Volume 1.pdf", "abbr": "BU", "role": "Vampiric Expansion" },
+        { "file": "Zeitguist - Adventures in Zeitgiest.pdf", "abbr": "ZEIT", "role": "Steampunk/Logic" }
+      ]
+    },
+    {
+      "category": "BESTIARY_NPC_LORE",
+      "description": "Descriptions and stat-blocks for high-tier NPCs and Monsters.",
+      "sources": [
+        { "file": "Monstrous Menagerie.pdf", "abbr": "MMen", "role": "A5e Creature Stats" },
+        { "file": "battlezoo-bestiary-strange-and-unusual.pdf", "abbr": "BZB_SU", "role": "Exotic Monster Stats" },
+        { "file": "Mythological Figures Maleficent Monsters.pdf", "abbr": "MFMM", "role": "Legendary NPC Stats" },
+        { "file": "delverx27s-guide-to-beast-world.pdf", "abbr": "DGBW", "role": "Anthropomorphic Bestiary" }
+      ]
+    }
+  ]
+}
