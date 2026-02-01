@@ -24,285 +24,112 @@ TABLE OF CONTENTS:
 # === FILE: reference_heritages_wotc.json ===
 
 ### DATA SOURCE: reference_heritages_wotc.json ###
-- reference_id: REG_HERITAGE_WOTC_V2.0
-- symbology: Eclipsed_Zodiac
-* ZODIAC_MAPPING:
-  - [Transient]: The Burning Candle
-  - [Sylvan]: The Whispering Bloom
-  - [Feral]: The Primal Claw
-  - [Herptile]: The Sun-Scale
-  - [Draconic]: The Eternal Wyrm
-  - [Inorganic]: The Soul-Forge
-  - [Hollow]: The Cold Threshold
-  - [Elemental]: The Bound Storm
-  - [Outer]: The Severed Chain
-  - [Warped]: The Fractured Eye
-  - [Titanic]: The Burdened Earth
-  - [Pelagic]: The Abyssal Depth
-* HERITAGES:
-  * CORE_2024:
-    - [Entry]:
-      - name: Human
-      - source: PHB 2024
-      * TAGS:
-        - [Transient]
-        - [Bipedal]
-        - [Adaptable]
-    - [Entry]:
-      - name: Orc
-      - source: PHB 2024
-      * TAGS:
-        - [Transient]
-        - [Bipedal]
-        - [Adrenaline]
-    - [Entry]:
-      - name: Halfling
-      - source: PHB 2024
-      * TAGS:
-        - [Transient]
-        - [Diminutive]
-        - [Lucky]
-    - [Entry]:
-      - name: Elf (High/Wood)
-      - source: PHB 2024
-      * TAGS:
-        - [Sylvan]
-        - [Bipedal]
-        - [Fey]
-    - [Entry]:
-      - name: Gnome
-      - source: PHB 2024
-      * TAGS:
-        - [Sylvan]
-        - [Diminutive]
-        - [Cunning]
-    - [Entry]:
-      - name: Tiefling
-      - source: PHB 2024
-      * TAGS:
-        - [Outer]
-        - [Bipedal]
-        - [Fiendish]
-    - [Entry]:
-      - name: Aasimar
-      - source: PHB 2024
-      * TAGS:
-        - [Outer]
-        - [Bipedal]
-        - [Transcendent]
-    - [Entry]:
-      - name: Dragonborn
-      - source: PHB 2024
-      * TAGS:
-        - [Draconic]
-        - [Bipedal]
-        - [Elemental]
-    - [Entry]:
-      - name: Goliath
-      - source: PHB 2024
-      * TAGS:
-        - [Titanic]
-        - [Bipedal]
-        - [Primal]
-  * MULTIVERSE_REVISED:
-    - [Entry]:
-      - name: Aarakocra
-      - source: MP:MotM
-      * TAGS:
-        - [Feral]
-        - [Winged]
-        - [Avian]
-    - [Entry]:
-      - name: Genasi (Air/Fire/Earth)
-      - source: MP:MotM
-      * TAGS:
-        - [Elemental]
-        - [Bipedal]
-        - [Planar]
-    - [Entry]:
-      - name: Bugbear
-      - source: MP:MotM
-      * TAGS:
-        - [Transient]
-        - [Bipedal]
-        - [Ambusher]
-    - [Entry]:
-      - name: Centaur
-      - source: MP:MotM
-      * TAGS:
-        - [Feral]
-        - [Quadruped]
-        - [Fey]
-    - [Entry]:
-      - name: Changeling
-      - source: MP:MotM
-      * TAGS:
-        - [Sylvan]
-        - [Bipedal]
-        - [Shapeshifter]
-    - [Entry]:
-      - name: Fairy
-      - source: MP:MotM
-      * TAGS:
-        - [Sylvan]
-        - [Winged]
-        - [Diminutive]
-    - [Entry]:
-      - name: Firbolg
-      - source: MP:MotM
-      * TAGS:
-        - [Titanic]
-        - [Bipedal]
-        - [Sylvan]
-    - [Entry]:
-      - name: Githyanki/Githzerai
-      - source: MP:MotM
-      * TAGS:
-        - [Warped]
-        - [Bipedal]
-        - [Psionic]
-    - [Entry]:
-      - name: Goblin
-      - source: MP:MotM
-      * TAGS:
-        - [Transient]
-        - [Diminutive]
-        - [Martial]
-    - [Entry]:
-      - name: Hobgoblin
-      - source: MP:MotM
-      * TAGS:
-        - [Transient]
-        - [Bipedal]
-        - [Fey-Linked]
-    - [Entry]:
-      - name: Kobold
-      - source: MP:MotM
-      * TAGS:
-        - [Draconic]
-        - [Diminutive]
-        - [Tinkerer]
-    - [Entry]:
-      - name: Lizardfolk
-      - source: MP:MotM
-      * TAGS:
-        - [Herptile]
-        - [Bipedal]
-        - [Primal]
-    - [Entry]:
-      - name: Minotaur
-      - source: MP:MotM
-      * TAGS:
-        - [Titanic]
-        - [Bipedal]
-        - [Labyrinthine]
-    - [Entry]:
-      - name: Tabaxi
-      - source: MP:MotM
-      * TAGS:
-        - [Feral]
-        - [Bipedal]
-        - [Agile]
-    - [Entry]:
-      - name: Tortle
-      - source: MP:MotM
-      * TAGS:
-        - [Herptile]
-        - [Bipedal]
-        - [Armored]
-    - [Entry]:
-      - name: Triton
-      - source: MP:MotM
-      * TAGS:
-        - [Pelagic]
-        - [Bipedal]
-        - [Planar]
-    - [Entry]:
-      - name: Yuan-ti
-      - source: MP:MotM
-      * TAGS:
-        - [Herptile]
-        - [Bipedal]
-        - [Serpentine]
-  * ASTRAL_GOTHIC:
-    - [Entry]:
-      - name: Autognome
-      - source: AAG
-      * TAGS:
-        - [Inorganic]
-        - [Diminutive]
-        - [Astral]
-    - [Entry]:
-      - name: Plasmoid
-      - source: AAG
-      * TAGS:
-        - [Warped]
-        - [Amorphous]
-        - [Ooze]
-    - [Entry]:
-      - name: Thri-kreen
-      - source: AAG
-      * TAGS:
-        - [Warped]
-        - [Insectoid]
-        - [Psionic]
-    - [Entry]:
-      - name: Dhampir
-      - source: VRGR
-      * TAGS:
-        - [Hollow]
-        - [Bipedal]
-        - [Vampiric]
-    - [Entry]:
-      - name: Reborn
-      - source: VRGR
-      * TAGS:
-        - [Hollow]
-        - [Bipedal]
-        - [Constructed]
+- reference_id: HERITAGE_ESSENCE_MAP_V1
+{
+ "system": "Heritage Essence Registry",
+ "version": "1.0",
+ "meta": {
+ "rule": "Every heritage is anchored by exactly 3 Essence Tags.",
+ "integration": "Tags determine Eldamon compatibility and Resonance bonuses."
+ },
+ "registry": {
+ "Aasimar": ["CELESTIAL", "ASTRAL", "ARCANE"],
+ "Dragonborn": ["DRACONIC", "PRIMAL", "STORM"],
+ "Dwarf": ["EARTH", "TECH", "MIND"],
+ "Elf": ["FEY", "ARCANE", "MIND"],
+ "Gnome": ["FEY", "TECH", "MIND"],
+ "Goliath": ["EARTH", "PRIMAL", "STORM"],
+ "Halfling": ["FEY", "MUTABLE", "SHADOW"],
+ "Human": ["MUTABLE", "TECH", "MIND"],
+ "Orc": ["PRIMAL", "EARTH", "STORM"],
+ "Tiefling": ["INFERNAL", "ARCANE", "SHADOW"],
+ "Bugbear": ["FEY", "SHADOW", "PRIMAL"],
+ "Centaur": ["FEY", "PRIMAL", "EARTH"],
+ "Changeling": ["MUTABLE", "SHADOW", "FEY"],
+ "Deep Gnome": ["EARTH", "SHADOW", "ARCANE"],
+ "Duergar": ["EARTH", "MIND", "SHADOW"],
+ "Eladrin": ["FEY", "MUTABLE", "ARCANE"],
+ "Fairy": ["FEY", "STORM", "ARCANE"],
+ "Firbolg": ["FEY", "PRIMAL", "EARTH"],
+ "Genasi_Air": ["STORM", "MUTABLE", "ARCANE"],
+ "Genasi_Earth": ["EARTH", "MUTABLE", "ARCANE"],
+ "Genasi_Fire": ["INFERNAL", "MUTABLE", "ARCANE"],
+ "Genasi_Water": ["PRIMAL", "MUTABLE", "ARCANE"],
+ "Githyanki": ["ASTRAL", "MIND", "TECH"],
+ "Githzerai": ["ASTRAL", "MIND", "MUTABLE"],
+ "Goblin": ["FEY", "SHADOW", "PRIMAL"],
+ "Harengon": ["FEY", "STORM", "PRIMAL"],
+ "Hobgoblin": ["FEY", "MIND", "TECH"],
+ "Kenku": ["SHADOW", "TECH", "PRIMAL"],
+ "Kobold": ["DRACONIC", "SHADOW", "TECH"],
+    "Lizardfolk": ["DRACONIC", "PRIMAL", "EARTH"],
+    "Minotaur": ["PRIMAL", "EARTH", "STORM"],
+    "Satyr": ["FEY", "PRIMAL", "MUTABLE"],
+    "Sea Elf": ["FEY", "PRIMAL", "STORM"],
+    "Shifter": ["MUTABLE", "PRIMAL", "SHADOW"],
+    "Tabaxi": ["PRIMAL", "STORM", "SHADOW"],
+    "Tortle": ["PRIMAL", "EARTH", "MIND"],
+    "Triton": ["PRIMAL", "ARCANE", "STORM"],
+    "Yuan-ti": ["ARCANE", "PRIMAL", "SHADOW"],
+    "Astral Elf": ["ASTRAL", "ARCANE", "CELESTIAL"],
+    "Autognome": ["TECH", "MIND", "FEY"],
+    "Giff": ["ASTRAL", "TECH", "EARTH"],
+    "Hadozee": ["ASTRAL", "PRIMAL", "STORM"],
+    "Kalashtar": ["MIND", "ASTRAL", "SHADOW"],
+    "Leonin": ["PRIMAL", "EARTH", "STORM"],
+    "Loxodon": ["PRIMAL", "EARTH", "MIND"],
+    "Plasmoid": ["MUTABLE", "ASTRAL", "EARTH"],
+    "Simic Hybrid": ["TECH", "MUTABLE", "PRIMAL"],
+    "Thri-kreen": ["ASTRAL", "PRIMAL", "MIND"],
+    "Vedalken": ["MIND", "TECH", "ARCANE"],
+    "Warforged": ["TECH", "EARTH", "MIND"]
+  }
+}
 ### END SOURCE ###
 
 # ==================
 
 
 # === FILE: reference_heritages_3rdparty.json ===
+- reference_id: HOMEBREW_ESSENCE_MAP_V1 
 {
-  "reference_id": "REG_HERITAGE_3P_V2.0",
-  "symbology": "Eclipsed_Zodiac",
-  "heritages": {
-    "grim_hollow": [
-      { "name": "Wechselkind", "source": "Grim Hollow", "tags": ["[Inorganic]", "[Diminutive]", "[Sylvan]"] },
-      { "name": "Laneshi", "source": "Grim Hollow", "tags": ["[Pelagic]", "[Bipedal]", "[Cold-Stained]"] },
-      { "name": "Ogresh", "source": "Grim Hollow", "tags": ["[Titanic]", "[Bipedal]", "[Tactical]"] },
-      { "name": "Downcast", "source": "Grim Hollow", "tags": ["[Outer]", "[Bipedal]", "[Fallen]"] },
-      { "name": "Dreamers", "source": "Grim Hollow", "tags": ["[Warped]", "[Bipedal]", "[Oneiric]"] },
-      { "name": "Disembodied", "source": "Grim Hollow", "tags": ["[Hollow]", "[Bipedal]", "[Phase]"] }
-    ],
-    "battlezoo": [
-      { "name": "Battle Dragon", "source": "Battlezoo", "tags": ["[Draconic]", "[Titanic]", "[Leveled]"] },
-      { "name": "Slime", "source": "Battlezoo", "tags": ["[Warped]", "[Amorphous]", "[Leveled]"] },
-      { "name": "Dungeon", "source": "Battlezoo", "tags": ["[Inorganic]", "[Titanic]", "[Leveled]"] }
-    ],
-    "heliana_beastworld": [
-      { "name": "Lotol", "source": "Heliana's", "tags": ["[Pelagic]", "[Diminutive]", "[Regenerative]"] },
-      { "name": "Mycelian", "source": "Heliana's", "tags": ["[Sylvan]", "[Amorphous]", "[Fungal]"] },
-      { "name": "Felid", "source": "Heliana's", "tags": ["[Feral]", "[Bipedal]", "[Predatory]"] },
-      { "name": "Vulpin", "source": "Heliana's", "tags": ["[Feral]", "[Bipedal]", "[Cunning]"] },
-      { "name": "Canid", "source": "Heliana's", "tags": ["[Feral]", "[Bipedal]", "[Pack-Oriented]"] }
-    ],
-    "valda_steinhardt": [
-      { "name": "Mandrake", "source": "Valda's", "tags": ["[Sylvan]", "[Bipedal]", "[Rooted]"] },
-      { "name": "Geppettin", "source": "Valda's", "tags": ["[Inorganic]", "[Diminutive]", "[Puppet]"] },
-      { "name": "Spirithost", "source": "Valda's", "[Hollow]", "[Bipedal]", "[Spectral]"],
-      { "name": "Manikin", "source": "Steinhardt's", "tags": ["[Inorganic]", "[Bipedal]", "[Eldritch]"] },
-      { "name": "Scourgeborne", "source": "Steinhardt's", "tags": ["[Warped]", "[Bipedal]", "[Mutant]"] }
-    ],
-    "sterling_vermin": [
-      { "name": "Saurian", "source": "Sterling Vermin", "tags": ["[Herptile]", "[Titanic]", "[Apex]"] }
-    ]
+  "system": "Homebrew Heritage Essence Registry",
+  "version": "1.0",
+  "meta": {
+    "rule": "Mapping of non-standard heritages to the 13 Essence Tags.",
+    "integration": "Ensures homebrew species interact with Eldamon and Zodiac systems."
+  },
+  "registry": {
+    "Downcast": ["CELESTIAL", "EARTH", "SHADOW"],
+    "Dreamers": ["MIND", "ASTRAL", "SHADOW"],
+    "Gorgon": ["EARTH", "PRIMAL", "ARCANE"],
+    "Harpy": ["STORM", "PRIMAL", "MIND"],
+    "Lanier": ["FEY", "PRIMAL", "STORM"],
+    "Lurker": ["SHADOW", "MIND", "MUTABLE"],
+    "Ogresh": ["EARTH", "PRIMAL", "MIND"],
+    "Oread": ["EARTH", "PRIMAL", "ARCANE"],
+    "Siren": ["FEY", "STORM", "MIND"],
+    "Wechselkind": ["FEY", "TECH", "SHADOW"],
+    "Avia-Ra": ["CELESTIAL", "STORM", "TECH"],
+    "Geppettin": ["TECH", "FEY", "MUTABLE"],
+    "Mandrake": ["PRIMAL", "EARTH", "ARCANE"],
+    "Mousefolk": ["PRIMAL", "SHADOW", "FEY"],
+    "Nautilid": ["ASTRAL", "MIND", "TECH"],
+    "Near-Human": ["MUTABLE", "TECH", "MIND"],
+    "Skathári": ["PRIMAL", "TECH", "EARTH"],
+    "Spirithost": ["SHADOW", "ASTRAL", "MIND"],
+    "Wrothian": ["INFERNAL", "STORM", "TECH"],
+    "Biomancer": ["TECH", "MUTABLE", "PRIMAL"],
+    "Cyber-frame": ["TECH", "MIND", "STORM"],
+    "Demigod": ["CELESTIAL", "ARCANE", "STORM"],
+    "Glitch-kin": ["TECH", "ASTRAL", "MUTABLE"],
+    "Manikin": ["TECH", "SHADOW", "MIND"],
+    "Medusa": ["SHADOW", "EARTH", "ARCANE"],
+    "Nymph": ["FEY", "PRIMAL", "MUTABLE"],
+    "Saurian": ["DRACONIC", "PRIMAL", "EARTH"],
+    "Scourgeborne": ["INFERNAL", "MUTABLE", "PRIMAL"]
   }
 }
-
 # ==================
 
 
@@ -453,71 +280,163 @@ TABLE OF CONTENTS:
 
 
 # === FILE: class_overlays.md ===
-# ECLIPSED REALMS: CLASS OVERLAYS (v1.0)
+# ECLIPSED REALMS: CLASS OVERLAYS (v1.4)
 **Base Engine:** D&D 5e (2024)
 **Injection Logic:** A5e (Level Up) Knacks & Subclass-to-Base Porting
+**Synthesis Logic:** Gestalt Derivative Mergers (Anime-Logic Overlays)
 
-## 1. MARTIAL CLASSES
+## GLOBAL CONSTRAINTS
+- **Higher Progression Rule:** If both synthesized components provide spellcasting, utilize only the higher progression table (e.g., Wizard > Arcane Trickster).
+- **Resource Merging:** Overlapping resources (Ki/Chakra, Leadership/Tactical Dice, Sorcery/Balance Mana) are unified into a single pool.
+- **NPC Parity:** NPCs with a Base Class tag inherit the Synthesized features for scaling.
 
-### BARBARIAN
+---
+
+## 1. MARTIAL CLASSES (SYNTHESIZED)
+
+### RAGE-BOUND BERSERKER (Barbarian + Warrior FFXIV)
+*Source: A5e Berserker / SilentSoren Warrior*
 - **Lvl 1:** Combat Tradition (A5e) - Replace Fighting Style.
+- **Lvl 1:** Juggernaut Stance (Defense + Aggro generation). *[From FFXIV Warrior]*
 - **Lvl 2, 5, 9, 13, 17:** Nature Knacks (A5e).
-- **Lvl 7:** Mindless Rage (Immunity: Charm/Fear). *[From Berserker]*
-- **Lvl 11:** Evasion (Reaction: Half AOE damage). *[Survival Pillar]*
-- **Lvl 14:** Retaliation (Reaction: Attack on hit). *[From Berserker]*
+- **Lvl 6:** Shake It Off (Convert Rage to Party Shield). *[From FFXIV Warrior]*
+- **Lvl 7:** Mindless Rage (Immunity: Charm/Fear). *[From A5e]*
+- **Lvl 11:** Relentless Release (Auto-Crit window + Death immunity). *[From FFXIV Warrior]*
+- **Lvl 14:** Retaliation (Reaction: Attack on hit). *[From A5e]*
 
-### FIGHTER
+### DRACONIC VANGUARD (Fighter + Dragoon FFXIV)
+*Source: A5e Fighter / SilentSoren Dragoon*
 - **Lvl 1:** Combat Traditions (A5e - Pick 2).
+- **Lvl 1:** Jump Momentum (Falling distance adds damage). *[From FFXIV Dragoon]*
 - **Lvl 2, 6, 9, 13, 17:** Exploration Knacks (A5e).
 - **Lvl 3:** Remarkable Athlete (+1/2 Prof to physical checks). *[From Champion]*
-- **Lvl 7:** Know Your Enemy (BA: Identify Resistances). *[From Battle Master]*
-- **Lvl 9:** Uncanny Dodge (Reaction: Half damage). *[Survival Pillar]*
+- **Lvl 6:** Blood Reset (Regain Maneuvers on Combo hits). *[From FFXIV Dragoon]*
+- **Lvl 11:** Stardiver (Replace Triple Attack with massive AoE plunge). *[From FFXIV Dragoon]*
+- **Lvl 17:** Nastrond Finisher (Linear beam destruction). *[From FFXIV Dragoon]*
 
-### ROGUE
+### OCCULT INQUISITOR (Rogue + Investigator)
+*Source: A5e Rogue / MHP Investigator*
 - **Lvl 1:** Combat Tradition (A5e).
-- **Lvl 2:** Fast Hands (BA: Tools/Object use). *[From Thief]*
+- **Lvl 1:** Analytical Strike (Merge Sneak Attack + Studied Strike). *[From Investigator]*
 - **Lvl 2, 3, 6, 9, 13, 17:** Rogue Knacks (A5e).
 - **Lvl 3:** Second-Story Work (Climb speed/Jump buff). *[From Thief]*
-- **Lvl 13:** Use Magic Device (Attunement +1). *[From Thief]*
+- **Lvl 6:** Insightful Defense (Add Int to AC/Saves). *[From Investigator]*
+- **Lvl 11:** Expert Forensics (Reliable Talent restores Spell Slots). *[From Investigator]*
+- **Lvl 17:** Final Report (Stroke of Luck triggers Instant Kill). *[From Investigator]*
+
+### CHAKRA-BORN STRIKER (Monk + Ala Mhigan Monk)
+*Source: A5e Monk / SilentSoren Monk*
+- **Lvl 1:** Greased Lightning (Speed/Dmg stacks on form cycle). *[From FFXIV Monk]*
+- **Lvl 2:** Internal Energy Pool (Merge Ki + Chakra).
+- **Lvl 2, 4, 8, 12, 16:** Athletic Knacks (A5e).
+- **Lvl 6:** Forbidden Chakra (Stunned targets take double damage). *[From FFXIV Monk]*
+- **Lvl 14:** Perfected Body (Diamond Soul + Physical DR). *[From A5e/FFXIV]*
+- **Lvl 17:** Final Form (Infinite Form Access). *[From FFXIV Monk]*
 
 ---
 
-## 2. PRIEST & WARDEN CLASSES
+## 2. PRIEST & WARDEN CLASSES (SYNTHESIZED)
 
-### CLERIC
+### RADIANT HIEROPHANT (Cleric + White Mage)
+*Source: A5e Cleric / SilentSoren White Mage*
+- **Lvl 1:** Aetherial Shield (Heals grant Temp HP). *[From White Mage]*
 - **Lvl 2:** Divine Infusion (Choose: Stealth Adv. or Healer's PB bonus).
 - **Lvl 2, 3, 5, 9, 13, 17:** Religious Knacks (A5e).
-- **Lvl 5:** War Priest (BA Weapon Attack - Wis/Day). *[From War Domain]*
-- **Lvl 9:** Divine Aegis (Reaction: Slot Level x 10 damage reduction). *[Survival Pillar]*
+- **Lvl 6:** The Lily System (Free Domain Spells). *[From White Mage]*
+- **Lvl 11:** Liturgy of the Bell (Reactive Healing Station). *[From White Mage]*
+- **Lvl 17:** Avatar of Temperance (Winged Form). *[From White Mage]*
 
-### DRUID
+### PRIMAL SYMBIONT (Druid + Blue Mage)
+*Source: A5e Druid / SilentSoren Blue Mage*
+- **Lvl 1:** Biological Learning (Learn spells by taking damage). *[From Blue Mage]*
+- **Lvl 2:** Azure Wild Shape (Use Wisdom for Beast Attacks). *[Overlay]*
 - **Lvl 2, 3, 5, 9, 13, 17:** Nature Knacks (A5e).
-- **Lvl 3:** Warden's Grimoire (Always Prepared Biome Spells). *[From Land]*
-- **Lvl 6:** Primal Strikes (Beast attacks are Magical). *[From Moon]*
-- **Lvl 10:** Nature's Shroud (Reaction: Resistance in terrain). *[Survival Pillar]*
+- **Lvl 6:** Mighty Beast Stance (Apply DR to Wild Shape). *[From Blue Mage]*
+- **Lvl 11:** Biological Burn (Spend Beast HP to cast spells). *[Overlay]*
+- **Lvl 20:** Archdruid Apex (Infinite Shapes fuel Infinite Spells). *[From A5e]*
 
-### PALADIN
+### OATHBOUND AEGIS (Paladin + Sultansworn)
+*Source: A5e Herald / SilentSoren Sultansworn*
 - **Lvl 1:** Combat Tradition (A5e).
+- **Lvl 1:** Sheltron Smite (Spend Slots to Block). *[From Sultansworn]*
 - **Lvl 2, 3, 6, 9, 13, 17:** Divine Lessons (A5e).
-- **Lvl 5:** Blessed Warrior's Bond (Use Cha for weapon hit/dmg).
-- **Lvl 9:** Righteous Bastion (Reaction: Protect ally in Aura). *[Survival Pillar]*
-- **Lvl 10:** Aura of Devotion (Charm Immunity). *[From Devotion]*
+- **Lvl 6:** Divine Veil Aura (Heals in Aura grant Shields). *[From Sultansworn]*
+- **Lvl 11:** Holy Spirit (Ranged Smite). *[From Sultansworn]*
+- **Lvl 17:** Passage of Arms (100% Block Rate Wings). *[From Sultansworn]*
+
+### APEX HUNTER (Ranger + Monster Hunter)
+*Source: A5e Ranger / Amellwind Monster Hunter*
+- **Lvl 1:** Slayer's Sense (Harvesting/Tracking Mechanics). *[From MH]*
+- **Lvl 2:** Stamina Transmutation (Spell Slots <-> Stamina). *[Overlay]*
+- **Lvl 2, 6, 10, 14:** Wilderness Knacks (A5e).
+- **Lvl 6:** Primal Coating (Spells stack with Oils). *[From MH]*
+- **Lvl 11:** Weapon Art Combos (Maneuvers double Art damage). *[From MH]*
+- **Lvl 20:** Elder Dragon Wisdom (Add Wis to damage). *[From MH]*
 
 ---
 
-## 3. MAGE CLASSES
+## 3. MAGE CLASSES (SYNTHESIZED)
 
-### WIZARD
+### ETHERIC DEVASTATOR (Wizard + Black Mage)
+*Source: A5e Wizard / SilentSoren Black Mage*
+- **Lvl 1:** Thermodynamic Recovery (Combat Slot Regen). *[From Black Mage]*
 - **Lvl 3:** Sculpt Spells (Protect allies from AOE). *[From Evocation]*
 - **Lvl 4, 8, 12, 16, 20:** Elective Studies (A5e).
-- **Lvl 9:** Arcane Flicker (Reaction: 10ft blink/miss). *[Survival Pillar]*
-- **Lvl 10:** Arcane Ward (Level + Int shielding). *[From Abjuration]*
+- **Lvl 6:** Ley Lines (Expertise on Spell Attacks). *[From Black Mage]*
+- **Lvl 11:** Triplecast (Cast 3 spells in one turn). *[From Black Mage]*
+- **Lvl 17:** Xenoglossy Thesis (Signature Spells deal bonus dmg). *[From Black Mage]*
 
-### WARLOCK
-- **Lvl 1:** Awakened Mind (30ft Telepathy). *[From GOO]*
+### VOID-BOUND HARVESTER (Warlock + Reaper)
+*Source: A5e Warlock / SilentSoren Reaper*
+- **Lvl 1:** Eldritch Harvest (Spells build Soul Gauge). *[From Reaper]*
 - **Lvl 2, 3, 5, 7, 9, 13, 17:** Warlock Arts (A5e).
-- **Lvl 6:** Patron's Luck (+1d10 to save/check). *[From Fiend]*
-- **Lvl 11:** Patron's Ward (Reaction: Half damage + 30ft TP). *[Survival Pillar]*
+- **Lvl 6:** Hell's Ingress (Teleport triggers Patron defense). *[From Reaper]*
+- **Lvl 11:** Enshroud Arcana (Bonus Action Mystic Arcanum). *[From Reaper]*
+- **Lvl 17:** Communio Reset (Nuke + Slot Refresh). *[From Reaper]*
+
+### CRIMSON ARCANIST (Sorcerer + Red Mage)
+*Source: A5e Sorcerer / SilentSoren Red Mage*
+- **Lvl 1:** Dualcast Metamagic (Free Metamagic on Bonus Spells). *[From Red Mage]*
+- **Lvl 2:** Aetheric Exchange (Sorcery Points <-> Balance Mana). *[Overlay]*
+- **Lvl 6:** Displacement (Reaction: Teleport after cast). *[From Red Mage]*
+- **Lvl 11:** Chainspell Bombardment (Rapid Fire Casting). *[From Red Mage]*
+- **Lvl 17:** Resolution Beam (Line AOE Finisher). *[From Red Mage]*
+
+---
+
+## 4. TACTICAL & SUPPORT CLASSES (SYNTHESIZED)
+
+### GRAND STRATEGIST (Marshal + Warlord)
+*Source: A5e Marshal / Kibbles Warlord*
+- **Lvl 1:** Unified Command (Merge Leadership Dice). *[Overlay]*
+- **Lvl 2, 6, 10, 14:** Soldier's Knacks (A5e).
+- **Lvl 6:** Battlefield Presence (Ally attack + Tactical Strike). *[From Warlord]*
+- **Lvl 11:** Force Multiplier (Mass Party Reaction). *[From Warlord]*
+- **Lvl 17:** Legendary Commander (Infinite Dice at low HP). *[From A5e]*
+
+### ARCANO-MACHINIST (Artificer + Machinist)
+*Source: 5e Artificer / SilentSoren Machinist*
+- **Lvl 1:** Heat Gauge & Turrets. *[From Machinist]*
+- **Lvl 3:** Crafting Knacks (A5e).
+- **Lvl 6:** Reassemble Burst (Auto-Crit). *[From Machinist]*
+- **Lvl 11:** The Golem Engine (Automaton Queen + Spell Storing). *[Overlay]*
+- **Lvl 17:** Soul of Artifice (Saves + Final Finisher). *[From Artificer/Machinist]*
+
+### AETHERIAL CHRONICLER (Bard + Gridanian Bard)
+*Source: A5e Bard / SilentSoren Bard*
+- **Lvl 1:** Song Resonance (Inspiration builds Soul Gauge). *[From Gridanian]*
+- **Lvl 2, 6, 10:** Social Knacks (A5e).
+- **Lvl 6:** Safe Zone (Anti-CC Aura + Healing Buff). *[From Gridanian]*
+- **Lvl 11:** Magical Artillery (Apex Arrow). *[From Gridanian]*
+- **Lvl 17:** Radiant Finale (Damage capstone). *[From Gridanian]*
+
+### ELDRITCH ABERRANT (Jaeger + Accursed)
+*Source: Steinhardt Jaeger / SV Accursed*
+- **Lvl 1:** Curse Momentum (Ignore Curse penalties). *[Overlay]*
+- **Lvl 2, 6, 10:** Investigation/Survival Knacks (A5e).
+- **Lvl 6:** Monstrous Tactics (Mutations on movement). *[From Accursed]*
+- **Lvl 11:** Transgression (Transformation Hyper-Form). *[From Accursed]*
+- **Lvl 17:** Final Form (Immortality via Momentum). *[From Accursed]*
 
 # ==================
 
@@ -754,3 +673,4 @@ This system does NOT define:
 - World canon
 
 # ==================
+

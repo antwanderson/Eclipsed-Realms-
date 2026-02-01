@@ -170,120 +170,134 @@ This document catalogs all identified adventure modules, one-shots, and campaign
 # === FILE: reference_zodiac_engine.json ===
 
 ### DATA SOURCE: reference_zodiac_engine.json ###
-- reference_id: ZODIAC_ENGINE_V1
-- system_description: The Eclipsed Zodiac defines the 12 Metaphysical Origins of all sentient life. It governs heritage flavor, mythic scaling, and world-state reactions.
-* ENGINE_LOGIC:
-  - primary_key: origin_tag
-  - usage: Runner AI must use 'lore_resonance' to flavor NPC interactions and 'metaphysical_vibe' to describe supernatural events related to the PC's heritage.
-* ZODIAC_SIGNS:
-  - [Entry]:
-    - tag: [Transient]
-    - symbol: The Burning Candle
-    - lore_resonance: Species that burn brightly and briefly. They lack the long memory of the Sylvan but possess a terrifying capacity for rapid adaptation and cultural conquest.
-    - metaphysical_vibe: Urgency, heat, ambition, friction.
-    * EXPANSION_SLOTS:
-      * FACTIONS:
-      * WORLD_PRESSURE:
-      - zodiac_system: None
-  - [Entry]:
-    - tag: [Sylvan]
-    - symbol: The Whispering Bloom
-    - lore_resonance: Life tied to the ancient cycles of the Wyld. They do not merely live in nature; they are an extension of its growth and inevitable decay.
-    - metaphysical_vibe: Growth, hidden connections, cycles, patient hunger.
-    * EXPANSION_SLOTS:
-      * FACTIONS:
-      * WORLD_PRESSURE:
-      - zodiac_system: None
-  - [Entry]:
-    - tag: [Feral]
-    - symbol: The Primal Claw
-    - lore_resonance: Inheritors of the wild's instinct. They embody the razor-thin line between civilization and the raw, unyielding hunger of the hunter.
-    - metaphysical_vibe: Instinct, movement, sensory-dominance, pack-loyalty.
-    * EXPANSION_SLOTS:
-      * FACTIONS:
-      * WORLD_PRESSURE:
-      - zodiac_system: None
-  - [Entry]:
-    - tag: [Herptile]
-    - symbol: The Sun-Scale
-    - lore_resonance: Cold-blooded survivors of the world's first ages. They represent endurance, armored stoicism, and the unblinking gaze of the desert.
-    - metaphysical_vibe: Patience, stillness, heat-absorption, resilience.
-    * EXPANSION_SLOTS:
-      * FACTIONS:
-      * WORLD_PRESSURE:
-      - zodiac_system: None
-  - [Entry]:
-    - tag: [Draconic]
-    - symbol: The Eternal Wyrm
-    - lore_resonance: Blood of the ancient masters of the sky. Even in a broken world, their presence demands fealty, reflecting a power that predates mortal law.
-    - metaphysical_vibe: Pride, ancient authority, hoarding, elemental breath.
-    * EXPANSION_SLOTS:
-      * FACTIONS:
-      * WORLD_PRESSURE:
-      - zodiac_system: None
-  - [Entry]:
-    - tag: [Inorganic]
-    - symbol: The Soul-Forge
-    - lore_resonance: Artificial spirits bound to constructed forms. They are the 'Unborn,' representing the intersection of mortal craft and divine spark.
-    - metaphysical_vibe: Logic, persistence, inorganic-geometry, cold-purpose.
-    * EXPANSION_SLOTS:
-      * FACTIONS:
-      * WORLD_PRESSURE:
-      - zodiac_system: None
-  - [Entry]:
-    - tag: [Hollow]
-    - symbol: The Cold Threshold
-    - lore_resonance: Those who have tasted the end and returned. They stand in the doorway of the grave, carrying the silence of the afterlife in their veins.
-    - metaphysical_vibe: Silence, cold, phase-shifting, entropy.
-    * EXPANSION_SLOTS:
-      * FACTIONS:
-      * WORLD_PRESSURE:
-      - zodiac_system: None
-  - [Entry]:
-    - tag: [Elemental]
-    - symbol: The Bound Storm
-    - lore_resonance: Raw planar energy poured into a mortal vessel. They are walking storms, tremors, and wildfires, barely contained by their biology.
-    - metaphysical_vibe: Energy, volatility, planar-bleed, raw power.
-    * EXPANSION_SLOTS:
-      * FACTIONS:
-      * WORLD_PRESSURE:
-      - zodiac_system: None
-  - [Entry]:
-    - tag: [Outer]
-    - symbol: The Severed Chain
-    - lore_resonance: Descendants of the high and low heavens. They are living reminders of a divine hierarchy that has either abandoned the world or seeks to claim it.
-    - metaphysical_vibe: Radiance, shadow, fate, transcendence.
-    * EXPANSION_SLOTS:
-      * FACTIONS:
-      * WORLD_PRESSURE:
-      - zodiac_system: None
-  - [Entry]:
-    - tag: [Warped]
-    - symbol: The Fractured Eye
-    - lore_resonance: Those touched by the Abyssal, the Far-Realm, or chaotic mutation. They see the world as it truly is: a fragile veil over a madness-inducing truth.
-    - metaphysical_vibe: Psionics, mutation, alien-geometry, broken-reality.
-    * EXPANSION_SLOTS:
-      * FACTIONS:
-      * WORLD_PRESSURE:
-      - zodiac_system: None
-  - [Entry]:
-    - tag: [Titanic]
-    - symbol: The Burdened Earth
-    - lore_resonance: Inheritors of the giant-lords. They carry the weight of the earth and the slow, tectonic strength of the world's foundation.
-    - metaphysical_vibe: Mass, gravity, history, slow-impact.
-    * EXPANSION_SLOTS:
-      * FACTIONS:
-      * WORLD_PRESSURE:
-      - zodiac_system: None
-  - [Entry]:
-    - tag: [Pelagic]
-    - symbol: The Abyssal Depth
-    - lore_resonance: Entities of the crushing deep. They represent the fluid, hidden, and high-pressure secrets that the surface-dwellers have forgotten.
-    - metaphysical_vibe: Pressure, fluid-motion, darkness, depth.
-    * EXPANSION_SLOTS:
-      * FACTIONS:
-      * WORLD_PRESSURE:
-      - zodiac_system: None
+- reference_id: THE_VORTEX_WHEEL_V1
+{
+  "system": "The Vortex Zodiac",
+  "version": "1.0",
+  "meta": {
+    "description": "The 13 Metaphysical Origins of Elysium, determining Eldamon Resonance and Essence Alignment.",
+    "logic_order": "Deterministic Mapping: Tag -> Element -> Symbol"
+  },
+  "zodiac_signs": [
+    {
+      "id": "SCRIBE",
+      "name": "The Glacial Scribe",
+      "tag": "ARCANE",
+      "element": "Ice",
+      "resonance": "Runic Crystal",
+      "symbol": "A frozen quill piercing a sapphire lens",
+      "lore": "The recorder of laws that cannot be broken, keeping the world’s heat locked in eternal script."
+    },
+    {
+      "id": "VOYAGER",
+      "name": "The Starless Voyager",
+      "tag": "ASTRAL",
+      "element": "Air",
+      "resonance": "Ethereal Void",
+      "symbol": "An empty helm filled with swirling mist",
+      "lore": "The patron of those lost in the spaces between worlds; the cold breath of the vacuum."
+    },
+    {
+      "id": "INQUISITOR",
+      "name": "The Blind Inquisitor",
+      "tag": "CELESTIAL",
+      "element": "Light",
+      "resonance": "Radiant Truth",
+      "symbol": "A weeping eye behind a golden sunburst",
+      "lore": "Truth that burns away the flesh; light so bright it erases the observer from existence."
+    },
+    {
+      "id": "PYRE",
+      "name": "The Pyre-Hearted",
+      "tag": "DRACONIC",
+      "element": "Fire",
+      "resonance": "Ancient Warmth",
+      "symbol": "A dragon's skull cradling a dying ember",
+      "lore": "The memory of power before the world grew cold; the hearth of a dying god."
+    },
+    {
+      "id": "BASTION",
+      "name": "The Iron Bastion",
+      "tag": "EARTH",
+      "element": "Earth",
+      "resonance": "Unyielding Stone",
+      "symbol": "An anvil carved from a mountain peak",
+      "lore": "The weight of existence that refuses to move; the foundation that outlasts the soul."
+    },
+    {
+      "id": "SATYR",
+      "name": "The Drowning Satyr",
+      "tag": "FEY",
+      "element": "Water",
+      "resonance": "Whimsical Flow",
+      "symbol": "A flute tangled in black lily pads",
+      "lore": "The joy that lures travelers into the deep; the shifting current of the mind's decay."
+    },
+    {
+      "id": "CARRION",
+      "name": "The Carrion King",
+      "tag": "INFERNAL",
+      "element": "Poison",
+      "resonance": "Corrupting Curse",
+      "symbol": "A crown of thorns dripping with purple ichor",
+      "lore": "The inevitable rot of hierarchy; power that poisons the hand that wields it."
+    },
+    {
+      "id": "MONK",
+      "name": "The Glass Monk",
+      "tag": "MIND",
+      "element": "Mind",
+      "resonance": "Psychic Will",
+      "symbol": "A shattered mirror reflecting a third eye",
+      "lore": "Perfect clarity found only in total mental fracture; the discipline found in the void."
+    },
+    {
+      "id": "CHIMERA",
+      "name": "The Chimera-Bane",
+      "tag": "MUTABLE",
+      "element": "Life",
+      "resonance": "Infinite Flux",
+      "symbol": "A serpent devouring its own shifting tail",
+      "lore": "The horror of growth without end; evolution that has forgotten its original shape."
+    },
+    {
+      "id": "RAVAGER",
+      "name": "The Great Ravager",
+      "tag": "PRIMAL",
+      "element": "Nature",
+      "resonance": "Raw Instinct",
+      "symbol": "A bloody paw print over a tangled briar",
+      "lore": "The hunger that predates language; the earth reclaiming what was once civilized."
+    },
+    {
+      "id": "SHROUD",
+      "name": "The Hollow Shroud",
+      "tag": "SHADOW",
+      "element": "Darkness",
+      "resonance": "Creeping Gloom",
+      "symbol": "A lantern that emits black smoke",
+      "lore": "The comfort of the end; the shadow that grows longer as the soul dims."
+    },
+    {
+      "id": "WEAVER",
+      "name": "The Fulgurite Weaver",
+      "tag": "STORM",
+      "element": "Electricity",
+      "resonance": "Spark of Adrenaline",
+      "symbol": "A spear made of glass lightning",
+      "lore": "The sudden, violent realization of mortality; the speed of a dying heartbeat."
+    },
+    {
+      "id": "MARTYR",
+      "name": "The Clockwork Martyr",
+      "tag": "TECH",
+      "element": "Metal",
+      "resonance": "Precision Gear",
+      "symbol": "A bleeding heart encased in brass gears",
+      "lore": "The sacrifice of humanity for mechanical perfection; the ticking of the world's end."
+    }
+  ]
+}
 ### END SOURCE ###
 
 # ==================
